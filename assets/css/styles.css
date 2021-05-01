@@ -1,0 +1,34 @@
+@font-face{
+   font-family: "Nier";
+   src: url(../font/ITC\ Benguiat\ Book.ttf);
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: black;
+}
+.header-logo{
+    width: 100%;
+    height: 40%;
+    padding-left: 2%
+}
+.header-logo-img{
+    height: 100%;
+}
+.inicio{
+    background-image: linear-gradient( rgba(0 , 0, 0, 0) 65%, rgba(0,0,0, 1) ),url(../img/1920x1080-Wallpaper-1.jpg);
+    width: 100%;
+    min-height: 909px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
