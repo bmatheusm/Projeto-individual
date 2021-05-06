@@ -1,4 +1,18 @@
-Usar o sistema de chip de Nier no site
-Se tirar chip de OS aparecer um dos finais
-Ter a opção de apagar os dados gravados para colocar uma mensagem na tela principal
-Importar a fonte Rodin para usar nos textos
+ - Usar o sistema de chip de Nier no site
+- Se tirar chip de OS aparecer um dos finais
+- Ter a opção de apagar os dados gravados para colocar uma mensagem na tela principal (O nome do usuário aparece na mensagem)
+- Importar a fonte Rodin para usar nos textos
+- Importar a fonte do titulo
+- Gráfico pode ser com os status do personagem
+- Gráfico pode ser com o numero de slots que cada chip oculpa
+- Criar pagina 2b
+- Criar pagina 9s
+- Criar pagina a2
+- Criar banco de dados e modelo lógico
+- Salvar dados do usuário e dos loadouts no banco de dados
+- Traduzir o texto de introdução
+- Inserir armas nos loadouts (Desejável)
+- Criar slides
+
+
+- Criar variáveis para guardar as divs dos chips com o Mathrandom() já implantado nelas 

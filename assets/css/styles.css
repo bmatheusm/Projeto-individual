@@ -2,13 +2,26 @@
    font-family: "Nier";
    src: url(../font/ITC\ Benguiat\ Book.ttf);
 }
-a{
-    text-decoration: none;
+@font-face{
+    font-family: Rodin;
+    src: url(../font/rodinpro-db_bigfontsite.com.otf);
 }
 body{
     margin: 0;
     padding: 0;
     border: 0;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-family: Rodin;
+    max-height: 100%;
+}
+h1{
+    font-family: Rodin;
+    text-align: center;
+    cursor: default;
 }
 .header{
     height: 60px;
@@ -25,10 +38,8 @@ body{
 .header-logo-img{
     height: 100%;
 }
-.inicio{
-    background-image: linear-gradient( rgba(0 , 0, 0, 0) 65%, rgba(0,0,0, 1) ),url(../img/1920x1080-Wallpaper-1.jpg);
+footer{
     width: 100%;
-    min-height: 909px;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-color: black;
+    height: 80px;
 }

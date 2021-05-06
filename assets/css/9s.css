@@ -1,0 +1,71 @@
+.inicio{
+    background-image: url(../img/9s-background.jpg);
+    width: 100%;
+    min-height: 300px;
+    background-position:center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.instrucao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+}
+.main{
+    background-image: url(../img/fundo-menu-desktop.png);
+    width: 100%;
+    min-height: 1000px;
+}
+.chip_slot{
+    height: 512px;
+    width: 150px;
+    background-color: grey;
+}
+.tamanho{
+    width: 100%;
+    height: fit-content;
+}
+.tamanho div{
+    box-shadow: 0px -1px 0px black inset,0px 1px 0px black inset;
+    width: 100%;
+}
+.chip_menu{
+    width: 20%;
+}
+.chip_menu div{
+    background-color: #b2ab99;
+    font-family: Rodin;
+    color: #534f46;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 100%;
+    -webkit-user-select: none; /* Não permite que o texto seja selecionavel no Chrome */
+}
+.chip_menu div span{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 69%;
+}
+.chip_menu div img{
+    height: 25px;
+}
+.system{
+    background-color: saddlebrown;
+}
+.attack{
+    background-color: #e6b8af;
+}
+.defense{
+    background-color: #f0e4d3;
+}
+.support{
+    background-color: #fff2cc;
+}
+.hacking{
+    background-color: #efefef;
+}

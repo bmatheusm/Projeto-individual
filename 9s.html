@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/9s.css">
+    <title>9S</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <a href="home.html">
+                <img class="header-logo-img"
+                    src="assets/img/nier-automata-ps4-games-playstation-nier-automata-logo-transparent-440_220.jpg">
+            </a>
+        </div>
+    </div>
+    <div class="inicio"></div>
+    <div class="instrucao"><h1>Escolha seus chips</h1></div>
+    <div class="main">
+        <div class="chips">
+            <button>System</button><button>Attack</button><button>Defense</button><button>Support</button><button>Hacking</button>
+            <div class="chip_menu">
+                <div id="but_os" onclick="adicionar()"><img src="assets/img/chip-img.jpg">OS Chip<span>[0]</span></div>
+            </div>
+        </div>
+        <div class="chip_slot" id="chip_slot" style="height: 512;">
+            <div class="tamanho" id="tamanho">
+                <div class="system" id="os_chip"></div>
+                <div class="system" id="hp_gauge"></div>
+                <div class="system" id="skill_gauge"></div>
+                <div class="system" id="exp_gauge"></div>
+                <div class="system" id="enemy_data"></div>
+                <div class="system" id="mini-map"></div>
+                <div class="system" id="objectives"></div>
+                <div class="system" id="text_log"></div>
+                <div class="system" id="save_points"></div>
+                <div class="system" id="fishing_spots"></div>
+                <div class="system" id="damage_values"></div>
+                <div class="system" id="sound_waves"></div>
+                <div class="system" id="control"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>
+<script>
+    /* O chip_slot tem 128 slots
+       a altura da div é 512px o que faz que 1 slot seja equivalente a 4px */
+       ocupado = 0;
+    function adicionar() {
+        
+        slots = parseInt(Math.random()*10+1);
+        teste = slots * 4;
+        slot_ocupado = Number(ocupado);
+        slot = 512;
+        if (slot - slot_ocupado < teste) {
+            alert('Não é posivel adicionar esse chip');
+        } else {
+            tamanho.innerHTML +=`<div class="system" style="height:${teste}px;"></div>`;
+            ocupado = slot_ocupado + teste;
+            tamanho.style.height =`${ocupado}px`;
+        }
+    }
+    function remover() {
+        //remove() pode apagar uma div
+    }
+</script>

@@ -1,0 +1,66 @@
+.inicio-row{
+    background-image: linear-gradient( rgba(0 , 0, 0, 0) 65%, rgba(0,0,0, 1) ),url(../img/1920x1080-Wallpaper-1.jpg);
+    width: 100%;
+    min-height: 909px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.introducao-row{
+    background-color: black;
+    color: white;
+    min-width: 100%;
+    width: fit-content;
+    padding: 2% 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    /* flex-wrap: wrap; Está jogando a imagem para baixo quando a tela está muito pequena */
+    max-width: 85%;
+    justify-content: center;
+}
+.ambiente{
+    width: 34%;
+    max-width: 550px;
+}
+.historia{
+    text-align: center;
+    width: 25%;
+    padding: 3%;
+    min-width: 200px;
+}
+.ambiente img{
+    width: 100%;
+    border: solid;
+}
+.instrucao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+}
+.personagens-row{
+    background-image: linear-gradient( rgba(0 , 0, 0, 1), rgba(0,0,0, 0) 20%), url(../img/csasectearx.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .personagens-row .container{
+    flex-wrap: wrap;
+} */
+.personagens{
+    width: 377px;
+    padding: 5% 0%;
+}
+.personagens img{
+    width: 100%; 
+}
+.a2{
+    margin: 0 9%;
+}
