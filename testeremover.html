@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="remover" onclick="removeElem(this.id)">Remover me</div>
+    <div id="remover2" onclick="removeElem(this.id)">Me remove</div>
+</body>
+</html>
+<script>
+    function removeElem(qualquer) {
+        var childElem = document.getElementById(qualquer);
+        var parentElem = childElem.parentNode;
+        parentElem.removeChild(qualquer);
+    }
+</script>

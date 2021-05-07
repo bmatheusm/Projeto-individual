@@ -23,10 +23,24 @@
         <div class="chips">
             <button>System</button><button>Attack</button><button>Defense</button><button>Support</button><button>Hacking</button>
             <div class="chip_menu">
-                <div id="but_os" onclick="adicionar()"><img src="assets/img/chip-img.jpg">OS Chip<span>[0]</span></div>
+                <div id="system_menu">
+                <div id="div_os_chip" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">OS Chip</span><span class="slot">[2]</span></div>
+                <div id="div_enemy_data" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Enemy Data</span><span class="slot">[2]</span></div>
+                <div id="div_damage_values" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Damage Values</span class="slot">[3]</div>
+                <div id="div_objectives" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Objectives</span class="slot">[1]</div>
+                <div id="div_control" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Control</span class="slot">[3]</div>
+                <div id="div_save_points" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Save Points</span class="slot">[1]</div>
+                <div id="div_mini-map" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Mini-map</span class="slot">[2]</div>
+                <div id="div_text_log" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Text Log</span class="slot">[2]</div>
+                <div id="div_skill_gauge" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Skill Gauge</span class="slot">[2]</div>
+                <div id="div_hp_gauge" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: HP Gauge</span class="slot">[2]</div>
+                <div id="div_exp_gauge" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: EXP Gauge</span class="slot">[1]</div>
+                <div id="div_fishing_spots" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Fishing Spots</span class="slot">[3]</div>
+                <div id="div_sound_waves" class="botao" onclick="adicionar(this.id)"><img src="assets/img/chip-img.jpg"><span class="nome">HUD: Sound Waves</span class="slot">[3]</div>
+                </div>    
             </div>
         </div>
-        <div class="chip_slot" id="chip_slot" style="height: 512;">
+        <div class="chip_slot" id="chip_slot">
             <div class="tamanho" id="tamanho">
                 <div class="system" id="os_chip"></div>
                 <div class="system" id="hp_gauge"></div>
@@ -56,21 +70,34 @@
     /* O chip_slot tem 128 slots
        a altura da div é 512px o que faz que 1 slot seja equivalente a 4px */
        ocupado = 0;
-    function adicionar() {
-        
+       numero = 0;
+    function adicionar(chip) {
+        numero++;
         slots = parseInt(Math.random()*10+1);
-        teste = slots * 4;
+        ocupar = slots * 4;
         slot_ocupado = Number(ocupado);
         slot = 512;
-        if (slot - slot_ocupado < teste) {
+        if (slot - slot_ocupado < ocupar) {
             alert('Não é posivel adicionar esse chip');
         } else {
-            tamanho.innerHTML +=`<div class="system" style="height:${teste}px;"></div>`;
-            ocupado = slot_ocupado + teste;
+            tamanho.innerHTML +=`<div class="system" id="${chip}${numero}" style="height:${ocupar}px;" onclick="remover(this.id)"></div>`;
+            ocupado = slot_ocupado + ocupar;
             tamanho.style.height =`${ocupado}px`;
         }
     }
-    function remover() {
-        //remove() pode apagar uma div
+    function remover(chip) { 
+        
+        tirar = document.getElementById(chip);
+        parentElem = tirar.parentNode; 
+        parentElem.removeChild(tirar);
+       
+        altura = tirar.style.height;
+        formatado = Number(altura.replace(/px/i, '')); //Substituindo 'px' por nada, o 'i' é para ignorar se a letra é maiuscula ou não 
+        ocupado = ocupado - formatado;
+
+        tamanho.style.height =`${ocupado}px`;
+        
+        //remove() pode apagar um elemento com especificamente o id e não var
+        //removeChild() precisa do elemento pai para ser usado
     }
 </script>
