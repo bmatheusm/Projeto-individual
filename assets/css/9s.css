@@ -59,6 +59,18 @@
 .chip_menu div img{
     height: 25px;
 }
+.attack_menu{
+    display: none;
+}
+.defense_menu{
+    display: none;
+}
+.support_menu{
+    display: none;
+}
+.hacking_menu{
+    display: none;
+}
 .system{
     background-color: saddlebrown;
 }
