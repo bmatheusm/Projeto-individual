@@ -1,6 +1,6 @@
 @font-face{
    font-family: "Nier";
-   src: url(../font/ITC\ Benguiat\ Book.ttf);
+   src: url(../font/ITC_Benguiat_Book.ttf);
 }
 @font-face{
     font-family: Rodin;
@@ -22,6 +22,9 @@ h1{
     font-family: Rodin;
     text-align: center;
     cursor: default;
+}
+span{
+    font-family: Rodin;
 }
 .header{
     height: 60px;

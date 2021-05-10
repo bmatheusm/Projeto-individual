@@ -2,296 +2,586 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/9s.css">
-    <title>9S</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/9s.css">
+        <title>9S</title>
 </head>
 
 <body>
-    <div class="header">
-        <div class="header-logo">
-            <a href="home.html">
-                <img class="header-logo-img"
-                    src="assets/img/nier-automata-ps4-games-playstation-nier-automata-logo-transparent-440_220.jpg">
-            </a>
+        <div class="header">
+                <div class="header-logo">
+                        <a href="home.html">
+                                <img class="header-logo-img"
+                                        src="assets/img/nier-automata-ps4-games-playstation-nier-automata-logo-transparent-440_220.jpg">
+                        </a>
+                </div>
         </div>
-    </div>
-    <div class="inicio"></div>
-    <div class="instrucao">
-        <h1>Escolha seus chips</h1>
-    </div>
-    <div class="main">
-        <div class="chips">
-            <button onclick="menu(this.id)" id="but_system">System</button>
-            <button onclick="menu(this.id)" id="but_attack">Attack</button>
-            <button onclick="menu(this.id)" id="but_defense">Defense</button>
-            <button onclick="menu(this.id)" id="but_support">Support</button>
-            <button onclick="menu(this.id)" id="but_hacking">Hacking</button>
-            <div class="chip_menu">
-                <div id="system_menu" class="system_menu">
-                    <div id="system_os_chip" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">OS Chip</span><span class="slot">[2]</span>
-                    </div>
-                    <div id="system_enemy_data" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Enemy Data</span><span
-                            class="slot">[2]</span></div>
-                    <div id="system_damage_values" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Damage Values</span><span
-                            class="slot">[3]</span>
-                    </div>
-                    <div id="system_objectives" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Objectives</span><span
-                            class="slot">[1]</span>
-                    </div>
-                    <div id="system_control" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Control</span><span
-                            class="slot">[3]</span></div>
-                    <div id="system_save_points" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Save Points</span><span
-                            class="slot">[1]</span>
-                    </div>
-                    <div id="system_mini-map" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Mini-map</span><span
-                            class="slot">[2]</span></div>
-                    <div id="system_text_log" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Text Log</span><span
-                            class="slot">[2]</span></div>
-                    <div id="system_skill_gauge" class="botao system attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Skill Gauge</span><span
-                            class="slot">[2]</span>
-                    </div>
-                    <div id="system_hp_gauge" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: HP Gauge</span><span
-                            class="slot">[2]</span></div>
-                    <div id="system_exp_gauge" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: EXP Gauge</span><span
-                            class="slot">[1]</span></div>
-                    <div id="system_fishing_spots" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Fishing Spots</span><span
-                            class="slot">[3]</span>
-                    </div>
-                    <div id="system_sound_waves" class="botao system" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">HUD: Sound Waves</span><span
-                            class="slot">[3]</span>
-                    </div>
-                </div>
-                <div id="attack_menu" class="attack_menu">
-                    <div id="attack_charge_attack" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Charge Attack</span><span
-                            class="slot">[]</span>
-                    </div>
-                    <div id="attack_counter" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Counter</span><span class="slot">[]</span>
-                    </div>
-                    <div id="attack_critical_up" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Critical Up</span><span
-                            class="slot">[]</span>
-                    </div>
-                    <div id="attack_down-attack_up" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Down-Attack Up</span><span
-                            class="slot">[]</span>
-                    </div>
-                    <div id="attack_last_stand" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Last Stand</span><span
-                            class="slot">[]</span>
-                    </div>
-                    <div id="attack_ranged_attack_up" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Ranged Attack Up</span><span
-                            class="slot">[]</span>
-                    </div>
-                    <div id="attack_shockwave" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Shockwave</span><span
-                            class="slot">[]</span>
-                    </div>
-                    <div id="attack_weapon_attack_up" class="botao attack" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Weapon Attack Up</span><span
-                            class="slot">[]</span>
-                    </div>
-                </div>
-                <div id="defense_menu" class="defense_menu">
-                    <div id="defense_anti_chain_damage" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Anti Chain Damage</span><span
-                            class="slot">[]</span></div>
-                    <div id="defense_auto-heal" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Auto-Heal</span><span
-                            class="slot">[]</span></div>
-                    <div id="defense_damage_absorb" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Damage Absorb</span><span
-                            class="slot">[]</span></div>
-                    <div id="defense_deadly_heal" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Deadly Heal</span><span
-                            class="slot">[]</span></div>
-                    <div id="defense_max_hp_up" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Max HP Up</span><span
-                            class="slot">[]</span></div>
-                    <div id="defense_melee_defense" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Melee Defense</span><span
-                            class="slot">[]</span></div>
-                    <div id="defense_offensive_heal" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Offensive Heal</span><span
-                            class="slot">[]</span></div>
-                    <div id="defense_ranged_defense" class="botao defense" onclick="adicionar(this.id)">
-                        <img src="assets/img/chip-img.jpg"><span class="nome">Ranged Defense</span><span
-                            class="slot">[]</span>
-                    </div>
-                    <div id="defense_reset" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Reset</span><span class="slot">[]</span>
-                    </div>
-                    <div id="defense_resilience" class="botao defense" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Resilience</span><span
-                            class="slot">[]</span>
-                    </div>
-                </div>
-                <div id="support_menu" class="support_menu">
-                    <div id="support_auto-use_item" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Auto-Use Item</span><span
-                            class="slot">[]</span></div>
-                    <div id="support_drop_rate_up" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Drop Rate Up</span><span
-                            class="slot">[]</span></div>
-                    <div id="support_exp_gain_up" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">EXP Gain Up</span><span
-                            class="slot">[]</span></div>
-                    <div id="support_evade_range_up" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Evade Range Up</span><span
-                            class="slot">[]</span></div>
-                    <div id="support_fast_cooldown" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Fast Cooldown</span><span
-                            class="slot">[]</span></div>
-                    <div id="support_moving_speed_up" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Moving Speed Up</span><span
-                            class="slot">[]</span></div>
-                    <div id="support_overclock" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Overclock</span><span
-                            class="slot">[]</span></div>
-                    <div id="support_taunt_up" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Taunt Up</span><span class="slot">[]</span>
-                    </div>
-                    <div id="support_vengeance" class="botao support" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Vengeance</span><span
-                            class="slot">[]</span></div>
-                </div>
-                <div id="hacking_menu" class="hacking_menu">
-                    <div id="hacking_combust" class="botao hacking" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Combust</span><span class="slot">[]</span>
-                    </div>
-                    <div id="hacking_heal_drops_up" class="botao hacking" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Heal Drops Up</span><span
-                            class="slot">[]</span></div>
-                    <div id="hacking_hijack_boost" class="botao hacking" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Hijack Boost</span><span
-                            class="slot">[]</span></div>
-                    <div id="hacking_stun" class="botao hacking" onclick="adicionar(this.id)"><img
-                            src="assets/img/chip-img.jpg"><span class="nome">Stun</span><span class="slot">[]</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="chip_slot" id="chip_slot">
-                <div class="tamanho" id="tamanho">
-                    <div class="system" id="os_chip"></div>
-                    <div class="system" id="hp_gauge"></div>
-                    <div class="system" id="skill_gauge"></div>
-                    <div class="system" id="exp_gauge"></div>
-                    <div class="system" id="enemy_data"></div>
-                    <div class="system" id="mini-map"></div>
-                    <div class="system" id="objectives"></div>
-                    <div class="system" id="text_log"></div>
-                    <div class="system" id="save_points"></div>
-                    <div class="system" id="fishing_spots"></div>
-                    <div class="system" id="damage_values"></div>
-                    <div class="system" id="sound_waves"></div>
-                    <div class="system" id="control"></div>
-                </div>
-            </div>
+        <div class="inicio"></div>
+        <div class="instrucao">
+                <h1>Escolha seus chips</h1>
         </div>
+        <div class="main">
+                <div class="container">
+                        <div class="chips">
+                                <div class="botoes_info">
+                                        <div class="botoes">
+                                                <button onclick="menu(this.id)" id="but_system" class="but_skill"><img
+                                                                src="assets/img/skill_symbol.png"> System</button>
+                                                <button onclick="menu(this.id)" id="but_attack" class="but_skill"><img
+                                                                src="assets/img/skill_symbol.png"> Attack</button>
+                                                <button onclick="menu(this.id)" id="but_defense" class="but_skill"><img
+                                                                src="assets/img/skill_symbol.png"> Defense</button>
+                                                <button onclick="menu(this.id)" id="but_support" class="but_skill"><img
+                                                                src="assets/img/skill_symbol.png"> Support</button>
+                                                <button onclick="menu(this.id)" id="but_hacking" class="but_skill"><img
+                                                                src="assets/img/skill_symbol.png"> Hacking</button>
+                                        </div>
+                                        <div id="div_info_slot" class="info_slot">
+                                                Slots em uso: 20/128
+                                        </div>
+                                </div>
+                                <div class="box_chips">
+                                        <div class="chip_menu">
+                                                <div id="system_menu" class="system_menu">
+                                                        <div id="system_os_chip" class="botao system"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">OS
+                                                                        Chip</span><span class="slot">[2]</span>
+                                                        </div>
+                                                        <div id="system_enemy_data" class="botao system"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD: Enemy
+                                                                        Data</span><span class="slot">[2]</span>
+                                                        </div>
+                                                        <div id="system_damage_values" class="botao system"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD:
+                                                                        Damage Values</span><span
+                                                                        class="slot">[3]</span>
+                                                        </div>
+                                                        <div id="system_objectives" class="botao system"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD:
+                                                                        Objectives</span><span class="slot">[1]</span>
+                                                        </div>
+                                                        <div id="system_control" class="botao system"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD:
+                                                                        Control</span><span class="slot">[3]</span>
+                                                        </div>
+                                                        <div id="system_save_points" class="botao system"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD: Save
+                                                                        Points</span><span class="slot">[1]</span>
+                                                        </div>
+                                                        <div id="system_mini-map" class="botao system"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD:
+                                                                        Mini-map</span><span class="slot">[2]</span>
+                                                        </div>
+                                                        <div id="system_text_log" class="botao system"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD:
+                                                                        Text
+                                                                        Log</span><span class="slot">[2]</span></div>
+                                                        <div id="system_skill_gauge" class="botao system"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD: Skill
+                                                                        Gauge</span><span class="slot">[2]</span>
+                                                        </div>
+                                                        <div id="system_hp_gauge" class="botao system"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD: HP
+                                                                        Gauge</span><span class="slot">[2]</span></div>
+                                                        <div id="system_exp_gauge" class="botao system"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD: EXP
+                                                                        Gauge</span><span class="slot">[1]</span>
+                                                        </div>
+                                                        <div id="system_fishing_spots" class="botao system"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD:
+                                                                        Fishing Spots</span><span
+                                                                        class="slot">[3]</span>
+                                                        </div>
+                                                        <div id="system_sound_waves" class="botao system"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">HUD: Sound
+                                                                        Waves</span><span class="slot">[3]</span>
+                                                        </div>
+                                                </div>
+                                                <div id="attack_menu" class="attack_menu">
+                                                        <div id="attack_charge_attack" class="botao attack"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Charge
+                                                                        Attack</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_counter" class="botao attack"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Counter</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_critical_up" class="botao attack"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Critical
+                                                                        Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_down-attack_up" class="botao attack"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Down-Attack Up</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_last_stand" class="botao attack"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Last
+                                                                        Stand</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_ranged_attack_up" class="botao attack"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Ranged
+                                                                        Attack Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_shockwave" class="botao attack"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Shockwave</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_weapon_attack_up" class="botao attack"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Weapon
+                                                                        Attack Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="attack_continuous_combo" class="botao attack"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Continuous Combo</span><span
+                                                                        class="slot">[6]</span>
+                                                        </div>
+                                                </div>
+                                                <div id="defense_menu" class="defense_menu">
+                                                        <div id="defense_anti_chain_damage" class="botao defense"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Anti
+                                                                        Chain Damage</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_auto-heal" class="botao defense"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Auto-Heal</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_damage_absorb" class="botao defense"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Damage
+                                                                        Absorb</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_deadly_heal" class="botao defense"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Deadly
+                                                                        Heal</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_max_hp_up" class="botao defense"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Max HP
+                                                                        Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_melee_defense" class="botao defense"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Melee
+                                                                        Defense</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_offensive_heal" class="botao defense"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Offensive Heal</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_ranged_defense" class="botao defense"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Ranged
+                                                                        Defense</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_reset" class="botao defense"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Reset</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="defense_resilience" class="botao defense"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Resilience</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                </div>
+                                                <div id="support_menu" class="support_menu">
+                                                        <div id="support_auto-use_item" class="botao support"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Auto-Use Item</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_drop_rate_up" class="botao support"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Drop
+                                                                        Rate Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_exp_gain_up" class="botao support"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">EXP
+                                                                        Gain Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_evade_range_up" class="botao support"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Evade
+                                                                        Range Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_fast_cooldown" class="botao support"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Fast
+                                                                        Cooldown</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_moving_speed_up" class="botao support"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Moving
+                                                                        Speed Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_overclock" class="botao support"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Overclock</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_taunt_up" class="botao support"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Taunt
+                                                                        Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_vengeance" class="botao support"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Vengeance</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="support_auto-collect_items" class="botao support"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Auto-Collect Items</span><span
+                                                                        class="slot">[6]</span>
+                                                        </div>
+                                                        <div id="support_item_scan" class="botao support"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Item Scan</span><span
+                                                                        class="slot">[6]</span>
+                                                        </div>
+                                                        <div id="support_evasive_system" class="botao support"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Evasive System</span><span
+                                                                        class="slot">[6]</span>
+                                                        </div>
+                                                        <div id="support_bullet_detonation" class="botao support"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Bullet Detonation</span><span
+                                                                        class="slot">[6]</span>
+                                                        </div>
+                                                </div>
+                                                <div id="hacking_menu" class="hacking_menu">
+                                                        <div id="hacking_combust" class="botao hacking"
+                                                                onclick="adicionar(this.id)">
+                                                                <img src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Combust</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="hacking_heal_drops_up" class="botao hacking"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Heal
+                                                                        Drops Up</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="hacking_hijack_boost" class="botao hacking"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Hijack
+                                                                        Boost</span><span class="slot">[]</span>
+                                                        </div>
+                                                        <div id="hacking_stun" class="botao hacking"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Stun</span><span
+                                                                        class="slot">[]</span>
+                                                        </div>
+                                                        <div id="hacking_death_rattle" class="botao hacking"
+                                                                onclick="adicionar(this.id)"><img
+                                                                        src="assets/img/chip-img.jpg"><span
+                                                                        class="nome">Death Rattle</span><span
+                                                                        class="slot">[6]</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="chip_slot" id="chip_slot">
+                                                <div class="tamanho" id="tamanho">
+                                                        <div class="system" id="system_os_chip1" style="height: 8px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_hp_gauge1" style="height: 8px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_skill_gauge1" style="height: 8px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_enemy_data1" style="height: 8px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_mini-map1" style="height: 8px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_objectives1" style="height: 4px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_text_log1" style="height: 8px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_save_points1" style="height: 4px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_damage_values1" style="height: 12px;" onclick="remover(this.id)"></div>
+                                                        <div class="system" id="system_control1" style="height: 12px;" onclick="remover(this.id)"></div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
 
-
-
-
-
-
+                </div>
+        </div>
 </body>
 
 </html>
 <script>
-    /* O chip_slot tem 128 slots
-       a altura da div é 512px o que faz que 1 slot seja equivalente a 4px */
-    ocupado = 0;
-    numero = 0;
-    function adicionar(chip) {
-        chip = document.getElementById(chip);
-        numero++;
-        slots = parseInt(Math.random() * 10 + 1);   
-        ocupar = slots * 4;
-        // slot_ocupado = Number(ocupado);
-        slot = 512;
-        var classe = 0;
-        
-        chip.className == 'botao system'?classe = 'system':chip.className == 'botao attack'?classe = 'attack':chip.className == 'botao defense'?
-        classe = 'defense':chip.className == 'botao support'?classe = 'support':chip.className == 'botao hacking'?classe = 'hacking':'';
+        randomizar = 'attack_menu';
 
-        if (slot - ocupado < ocupar) {
-            alert('Não é posivel adicionar esse chip');
-        } else {
-            tamanho.innerHTML += `<div class="${classe}" id="${chip}${numero}" style="height:${ocupar}px;" onclick="remover(this.id)"></div>`;
-            ocupado = ocupado + ocupar;
-            tamanho.style.height = `${ocupado}px`;
+        but_system.style.color = 'rgb(173,169,151)';
+        but_system.style.background = '#534f46';
+        for (contador = 0; ; contador++) {
+                valor_random = parseInt(Math.random() * 6 + 4);
+
+
+                contador == 8 && randomizar == 'attack_menu' ? (contador = 0, randomizar = 'defense_menu') : contador == 10 && randomizar == 'defense_menu' ?
+                        (contador = 0, randomizar = 'support_menu') : contador == 9 && randomizar == 'support_menu' ? (contador = 0, randomizar = 'hacking_menu') : '';
+                if (contador == 4 && randomizar == 'hacking_menu') break;
+
+
+
+                elemento = document.getElementById(randomizar);
+                elemento.children[contador].children[2].innerHTML = `[${valor_random}]`;
+
+                // contador == 1?randomizar = 'attack_charge_attack': contador == 2?randomizar = 'attack_counter': contador == 3?randomizar = 'attack_critical_up': contador == 4?
+                // randomizar = 'attack_down-attack_up': contador == 5?randomizar = 'attack_last_stand':contador == 6?randomizar = 'attack_ranged_attack_up':contador == 7?
+                // randomizar = 'attack_shockwave': contador == 8?randomizar = 'attack_weapon_attack_up':contador == 9?randomizar ='defense_anti_chain_damage':contador == 10?
+                // randomizar = 'defense_auto-heal':contador == 11?randomizar = 'defense_damage_absorb':contador == 12?randomizar = 'defense_deadly_heal':contador == 13?
+                // randomizar = 'defense_max_hp_up':contador == 14?randomizar = 'defense_melee_defense':contador == 15?randomizar = 'defense_offensive_heal':contador == 16?
+                // randomizar = 'defense_ranged_defense':contador == 17?randomizar = 'defense_reset':contador == 18?randomizar = 'defense_resilience':contador == 19?
+                // randomizar = 'support_auto-use_item':contador == 20?randomizar = 'support_drop_rate_up':contador == 21?randomizar = 'support_exp_gain_up':contador == 22?
+                // randomizar = 'support_evade_range_up':contador == 23?randomizar = 'support_fast_cooldown':contador == 24?randomizar = 'support_moving_speed_up':contador == 25?
+                // randomizar = 'support_overclock':contador == 26?randomizar = 'support_taunt_up':contador == 27?randomizar = 'support_vengeance':contador == 28?
+                // randomizar = 'hacking_combust':contador == 29?randomizar = 'hacking_heal_drops_up':contador == 30?randomizar = 'hacking_hijack_boost':contador == 31?
+                // randomizar = 'hacking_stun':'';
+
+                // elemento =document.getElementById(randomizar);
+                // elemento.children[2].innerHTML = `[${valor_random}]`;
         }
-    }
-    function remover(chip) {
 
-        tirar = document.getElementById(chip);
-        parentElem = tirar.parentNode;
-        parentElem.removeChild(tirar);
+        info_slot = 128;
+        ocupado = 80;
+        numero = 0;
+        var continuous_combo_qtd, auto_collect_items_qtd, item_scan_qtd, evasive_system_qtd, bullet_detonation_qtd, death_rattle_qtd, exp_gauge_qtd, fishing_spots_qtd, sound_waves_qtd;
+        continuous_combo_qtd = auto_collect_items_qtd = item_scan_qtd = evasive_system_qtd = bullet_detonation_qtd = death_rattle_qtd = exp_gauge_qtd = fishing_spots_qtd = sound_waves_qtd = 0;
+        var os_chip_qtd, hp_gauge_qtd, skill_gauge_qtd, enemy_data_qtd, mini_map_qtd, objectives_qtd, text_log_qtd, save_points_qtd, damage_values_qtd, control_qtd;
+        os_chip_qtd = hp_gauge_qtd = skill_gauge_qtd = enemy_data_qtd = mini_map_qtd = objectives_qtd = text_log_qtd = save_points_qtd = damage_values_qtd = control_qtd = 1;
 
-        altura = tirar.style.height;
-        formatado = Number(altura.replace(/px/i, '')); //Substituindo 'px' por nada, o 'i' é para ignorar se a letra é maiuscula ou não 
-        ocupado = ocupado - formatado;
 
-        tamanho.style.height = `${ocupado}px`;
 
-        //remove() pode apagar um elemento com especificamente o id e não var
-        //removeChild() precisa do elemento pai para ser usado
-    }
+        function adicionar(chip) {
+                if (chip == 'attack_continuous_combo' && continuous_combo_qtd == 1 || chip == 'support_auto-collect_items' && auto_collect_items_qtd == 1 || chip == 'support_item_scan'
+                        && item_scan_qtd || chip == 'support_evasive_system' && evasive_system_qtd == 1 || chip == 'support_bullet_detonation' && bullet_detonation_qtd == 1 || chip == 'hacking_death_rattle'
+                        && death_rattle_qtd == 1 || chip == 'system_os_chip' && os_chip_qtd == 1 || chip == 'system_hp_gauge' && hp_gauge_qtd == 1 || chip == 'system_skill_gauge'
+                        && skill_gauge_qtd == 1 || chip == 'system_enemy_data' && enemy_data_qtd == 1 || chip == 'system_mini-map' && mini_map_qtd == 1 || chip == 'system_objectives'
+                        && objectives_qtd == 1 || chip == 'system_text_log' && text_log_qtd == 1 || chip == 'system_save_points' && save_points_qtd == 1 || chip == 'system_damage_values'
+                        && damage_values_qtd == 1 || chip == 'system_control' && control_qtd == 1 || chip == 'system_exp_gauge' && exp_gauge_qtd == 1 || chip == 'system_fishing_spots'
+                        && fishing_spots_qtd == 1 || chip == 'system_sound_waves' && sound_waves_qtd == 1) {
 
-    function menu(pressionar) {
-        mostrar = document.getElementById(pressionar);
+                        alert('Você não pode ter mais de um deste mesmo chip');
 
-        if (mostrar == but_system) {
-            system_menu.style.display = 'block';
-            attack_menu.style.display = 'none';
-            defense_menu.style.display = 'none';
-            support_menu.style.display = 'none';
-            hacking_menu.style.display = 'none';
-        } else if (mostrar == but_attack) {
-            system_menu.style.display = 'none';
-            attack_menu.style.display = 'block';
-            defense_menu.style.display = 'none';
-            support_menu.style.display = 'none';
-            hacking_menu.style.display = 'none';
-        } else if (mostrar == but_defense) {
-            system_menu.style.display = 'none';
-            attack_menu.style.display = 'none';
-            defense_menu.style.display = 'block';
-            support_menu.style.display = 'none';
-            hacking_menu.style.display = 'none';
-        } else if (mostrar == but_support) {
-            system_menu.style.display = 'none';
-            attack_menu.style.display = 'none';
-            defense_menu.style.display = 'none';
-            support_menu.style.display = 'block';
-            hacking_menu.style.display = 'none';
-        } else {
-            system_menu.style.display = 'none';
-            attack_menu.style.display = 'none';
-            defense_menu.style.display = 'none';
-            support_menu.style.display = 'none';
-            hacking_menu.style.display = 'block';
+                } else {
+                        chip == 'attack_continuous_combo' ? continuous_combo_qtd++ : chip == 'support_auto-collect_items' ? auto_collect_items_qtd++ : chip == 'support_item_scan' ? item_scan_qtd++ :
+                                chip == 'support_evasive_system' ? evasive_system_qtd++ : chip == 'support_bullet_detonation' ? bullet_detonation_qtd++ : chip == 'hacking_death_rattle' ? death_rattle_qtd++ :
+                                        chip == 'system_os_chip' ? os_chip_qtd++ : chip == 'system_hp_gauge' ? hp_gauge_qtd++ : chip == 'system_skill_gauge' ? skill_gauge_qtd++ : chip == 'system_enemy_data' ? enemy_data_qtd++ :
+                                                chip == 'system_mini-map' ? mini_map_qtd++ : chip == 'system_objectives' ? objectives_qtd++ : chip == 'system_text_log' ? text_log_qtd++ : chip == 'system_save_points' ? save_points_qtd++ :
+                                                        chip == 'system_damage_values' ? damage_values_qtd++ : chip == 'system_control' ? control_qtd++ : chip == 'system_exp_gauge' ? exp_gauge_qtd++ : chip == 'system_fishing_spots' ? fishing_spots_qtd++ :
+                                                                chip == 'system_sound_waves' ? sound_waves_qtd++ : '';
+
+                        chip_elemento = document.getElementById(chip);
+                        slots = chip_elemento.children[2].innerHTML;
+                        slots = slots.replace(/(\[)|(\])/g, '');//Tirando '[]'
+                        ocupar = slots * 4;
+                        slot = 512;                      // O chip_slot tem 128 slots a altura da div é 512px o que faz que 1 slot seja equivalente a 4px
+                        var classe = 0;
+
+                        chip_elemento.className == 'botao system' ? classe = 'system' : chip_elemento.className == 'botao attack' ? classe = 'attack' : chip_elemento.className == 'botao defense' ?
+                                classe = 'defense' : chip_elemento.className == 'botao support' ? classe = 'support' : chip_elemento.className == 'botao hacking' ? classe = 'hacking' : '';
+
+                        if (slot - ocupado < ocupar) {
+                                alert('Não é posivel adicionar esse chip');
+                        } else if (chip == 'attack_continuous_combo' || chip == 'support_auto-collect_items' || chip == 'support_item_scan' || chip == 'support_evasive_system' || chip == 'support_bullet_detonation'
+                                || chip == 'hacking_death_rattle' || chip == 'system_os_chip' || chip == 'system_hp_gauge' || chip == 'system_skill_gauge' || chip == 'system_enemy_data'
+                                || chip == 'system_mini-map' || chip == 'system_objectives' || chip == 'system_text_log' || chip == 'system_save_points' || chip == 'system_damage_values'
+                                || chip == 'system_control' || chip == 'system_exp_gauge' || chip == 'system_fishing_spots' || chip == 'system_sound_waves') {
+
+                                tamanho.innerHTML += `<div class="${classe}" id="${chip}1" style="height:${ocupar}px;" onclick="remover(this.id)"><span class='desc'>${chip.replace(/_/g, ' ')} [${slots}]</span></div>`;
+                                ocupado = ocupado + ocupar;
+                                tamanho.style.height = `${ocupado}px`;        
+                        } else {
+                                numero++;
+                                tamanho.innerHTML += `<div class="${classe}" id="${chip}${numero}" style="height:${ocupar}px;" onclick="remover(this.id)"><span class='desc'>${chip.replace(/_/g, ' ')} [${slots}]</span></div>`;
+                                ocupado = ocupado + ocupar;
+                                tamanho.style.height = `${ocupado}px`;
+                        }
+                        info_slot = ocupado / 4;
+                        div_info_slot.innerHTML = `Slots em uso: ${info_slot}/128`;
+                }
+
         }
-    }
+        function remover(chip) {
+
+                chip == 'attack_continuous_combo1' ? continuous_combo_qtd-- : chip == 'support_auto-collect_items1' ? auto_collect_items_qtd-- : chip == 'support_item_scan1' ? item_scan_qtd-- :
+                chip == 'support_evasive_system1' ? evasive_system_qtd-- : chip == 'support_bullet_detonation1' ? bullet_detonation_qtd-- : chip == 'hacking_death_rattle1' ? death_rattle_qtd-- :
+                chip == 'system_os_chip1' ? os_chip_qtd-- : chip == 'system_hp_gauge1' ? hp_gauge_qtd-- : chip == 'system_skill_gauge1' ? skill_gauge_qtd-- : chip == 'system_enemy_data1' ? enemy_data_qtd-- :
+                chip == 'system_mini-map1' ? mini_map_qtd-- : chip == 'system_objectives1' ? objectives_qtd-- : chip == 'system_text_log1' ? text_log_qtd-- : chip == 'system_save_points1' ? save_points_qtd-- :
+                chip == 'system_damage_values1' ? damage_values_qtd-- : chip == 'system_control1' ? control_qtd-- : chip == 'system_exp_gauge1' ? exp_gauge_qtd-- : chip == 'system_fishing_spots1' ? fishing_spots_qtd-- :
+                chip == 'system_sound_waves1' ? sound_waves_qtd-- : '';
+
+                tirar = document.getElementById(chip);
+                parentElem = tirar.parentNode;
+                parentElem.removeChild(tirar);
+
+                altura = tirar.style.height;
+                formatado = Number(altura.replace(/px/i, '')); //Substituindo 'px' por nada, o 'i' é para ignorar se a diferença de maiuscula e minuscula
+                ocupado = ocupado - formatado;
+
+                tamanho.style.height = `${ocupado}px`;
+
+                info_slot = ocupado / 4;
+                div_info_slot.innerHTML = `Slots em uso: ${info_slot}/128`;
+                //remove() pode apagar um elemento com especificamente o id e não var
+                //removeChild() precisa do elemento pai para ser usado
+        }
+
+        function menu(pressionar) {
+                mostrar = document.getElementById(pressionar);
+
+                if (mostrar == but_system) {
+                        system_menu.style.display = 'block';
+                        attack_menu.style.display = 'none';
+                        defense_menu.style.display = 'none';
+                        support_menu.style.display = 'none';
+                        hacking_menu.style.display = 'none';
+                        but_system.style.color = 'rgb(173,169,151)';
+                        but_system.style.background = '#534f46';
+                        but_defense.style.color = '';
+                        but_defense.style.background = '';
+                        but_hacking.style.color = '';
+                        but_hacking.style.background = '';
+                        but_support.style.color = '';
+                        but_support.style.background = '';
+                        but_attack.style.color = '';
+                        but_attack.style.background = '';
+                } else if (mostrar == but_attack) {
+                        system_menu.style.display = 'none';
+                        attack_menu.style.display = 'block';
+                        defense_menu.style.display = 'none';
+                        support_menu.style.display = 'none';
+                        hacking_menu.style.display = 'none';
+                        but_attack.style.color = 'rgb(173,169,151)';
+                        but_attack.style.background = '#534f46';
+                        but_system.style.color = '';
+                        but_system.style.background = '';
+                        but_defense.style.color = '';
+                        but_defense.style.background = '';
+                        but_hacking.style.color = '';
+                        but_hacking.style.background = '';
+                        but_support.style.color = '';
+                        but_support.style.background = '';
+                } else if (mostrar == but_defense) {
+                        system_menu.style.display = 'none';
+                        attack_menu.style.display = 'none';
+                        defense_menu.style.display = 'block';
+                        support_menu.style.display = 'none';
+                        hacking_menu.style.display = 'none';
+                        but_defense.style.color = 'rgb(173,169,151)';
+                        but_defense.style.background = '#534f46';
+                        but_system.style.color = '';
+                        but_system.style.background = '';
+                        but_attack.style.color = '';
+                        but_attack.style.background = '';
+                        but_hacking.style.color = '';
+                        but_hacking.style.background = '';
+                        but_support.style.color = '';
+                        but_support.style.background = '';
+                } else if (mostrar == but_support) {
+                        system_menu.style.display = 'none';
+                        attack_menu.style.display = 'none';
+                        defense_menu.style.display = 'none';
+                        support_menu.style.display = 'block';
+                        hacking_menu.style.display = 'none';
+                        but_support.style.color = 'rgb(173,169,151)';
+                        but_support.style.background = '#534f46';
+                        but_system.style.color = '';
+                        but_system.style.background = '';
+                        but_attack.style.color = '';
+                        but_attack.style.background = '';
+                        but_defense.style.color = '';
+                        but_defense.style.background = '';
+                        but_hacking.style.color = '';
+                        but_hacking.style.background = '';
+                } else {
+                        system_menu.style.display = 'none';
+                        attack_menu.style.display = 'none';
+                        defense_menu.style.display = 'none';
+                        support_menu.style.display = 'none';
+                        hacking_menu.style.display = 'block';
+                        but_hacking.style.color = 'rgb(173,169,151)';
+                        but_hacking.style.background = '#534f46';
+                        but_system.style.color = '';
+                        but_system.style.background = '';
+                        but_attack.style.color = '';
+                        but_attack.style.background = '';
+                        but_defense.style.color = '';
+                        but_defense.style.background = '';
+                        but_support.style.color = '';
+                        but_support.style.background = '';
+                }
+        }
 
 </script>

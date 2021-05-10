@@ -20,11 +20,39 @@
     min-height: 1000px;
     display: flex;
     justify-content: center;
+    font-family: Rodin;
+}
+.container{
+    width: 95%;
+    display: flex;
+}
+.chips{
+    width: 100%;
+    margin-top: 27px;
+}
+.botoes_info{
+    width: 100%;
+    height: 33px;
+    display: flex;
+    justify-content: space-between;
+}
+.botoes{
+    display: flex;
+    height: 33px;
+    flex-wrap: wrap;
+}
+.box_chips{
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    margin-top: 34px;
 }
 .chip_slot{
     height: 512px;
     width: 150px;
     background-color: grey;
+    margin-left: 30%;
 }
 .tamanho{
     width: 100%;
@@ -36,9 +64,12 @@
 }
 .chip_menu{
     width: 306px;
+    min-width: 265px;
+    background-color: rgb(173,169,151);
+    /* height: 361px; */
 }
 .chip_menu .botao{
-    background-color: #b2ab99;
+    background-color: rgb(173,169,151);
     font-family: Rodin;
     color: #534f46;
     display: flex;
@@ -46,6 +77,7 @@
     height: 25px;
     width: 100%;
     -webkit-user-select: none; /* Não permite que o texto seja selecionavel no Chrome e safari */
+    margin-bottom: 3px;
 }
 /* .chip_menu div .slot{
     height: 100%;
@@ -53,11 +85,44 @@
     align-items: center;
     margin-left: 69%;
 } */
+.but_skill{
+    background-color: rgb(173,169,151);
+    font-family: Rodin;
+    color: #534f46;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    height: 33px;
+    width: 112px;
+    border: none;
+}
+.but_skill img{
+    height:33px;
+}
 .nome{
     width: 86%;
 }
 .chip_menu div img{
     height: 25px;
+    padding-left: 2px;
+}
+.info_slot{
+    -webkit-user-select: none;
+    color: #534f46;
+    background-color: rgb(173,169,151);
+    box-shadow: 5px 0px 0px rgb(83 79 70) inset;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    min-width: 179px;
+}
+.desc{
+    display: none;
+    margin-left: -185px;  /* Preciso descobrir o que fazer com .desc hover não é uma boa */
+}
+.tamanho:hover .desc{
+    display: block;
 }
 .attack_menu{
     display: none;
@@ -72,17 +137,22 @@
     display: none;
 }
 .system{
-    background-color: saddlebrown;
+    background-color: rgb(139,126,103);
+    box-shadow: 2px 0px 0px rgb(139,126,103) inset;
 }
 .attack{
-    background-color: #e6b8af;
+    background-color: rgb(172 135 104);
+    box-shadow: 2px 0px 0px rgb(172 135 104) inset;
 }
 .defense{
     background-color: #f0e4d3;
+    box-shadow: 2px 0px 0px #f0e4d3 inset;
 }
 .support{
-    background-color: #fff2cc;
+    background-color: rgb(233,222,176);
+    box-shadow: 2px 0px 0px rgb(233,222,176) inset;
 }
 .hacking{
     background-color: #efefef;
+    box-shadow: 2px 0px 0px #efefef inset;
 }
