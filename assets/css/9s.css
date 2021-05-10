@@ -118,12 +118,37 @@
     min-width: 179px;
 }
 .desc{
+    margin-left: -260px;  /* Preciso descobrir o que fazer com .desc hover não é uma boa */
+    justify-content: center;
+    width: 245px;
     display: none;
-    margin-left: -185px;  /* Preciso descobrir o que fazer com .desc hover não é uma boa */
+    border: solid #534f46;
+    background-color: rgb(173,169,151);
+    border-radius: 20px;
+    font-size: 14px;
+    color: #534f46;
+    text-align: center;
 }
-.tamanho:hover .desc{
+.info_box{
+    background: rgb(83, 79, 70);
+    color: rgb(173,169,151);
+    width: 700px;
+}
+.info{
+    color: rgb(83, 79, 70);
+    background: rgb(173,169,151);
+    display: none;
+}
+.info p{
+    margin: 0;
+}
+.nome_personagem{
+    background-color: rgb(173,169,151);
+    color: #534f46;
+}
+/* .tamanho:hover .desc{
     display: block;
-}
+} */
 .attack_menu{
     display: none;
 }
