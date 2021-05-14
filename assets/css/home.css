@@ -51,9 +51,6 @@
     align-items: center;
     justify-content: center;
 }
-/* .personagens-row .container{
-    flex-wrap: wrap;
-} */
 .personagens{
     width: 377px;
     padding: 5% 0%;

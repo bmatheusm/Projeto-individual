@@ -10,7 +10,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" 
         integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" 
         crossorigin="anonymous"></script>
-        <title>9S</title>
+        <title>2B</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                         </a>
                 </div>
         </div>
-        <div class="inicio"></div>
+        <div class="inicio2b"></div>
         <div class="instrucao">
                 <h1>Escolha seus chips</h1>
         </div>
@@ -38,8 +38,6 @@
                                                                 src="assets/img/skill_symbol.png"> Defense</button>
                                                 <button onclick="menu(this.id)" id="but_support" class="but_skill"><img
                                                                 src="assets/img/skill_symbol.png"> Support</button>
-                                                <button onclick="menu(this.id)" id="but_hacking" class="but_skill"><img
-                                                                src="assets/img/skill_symbol.png"> Hacking</button>
                                         </div>
                                         <div id="div_info_slot" class="info_slot">
                                                 Slots em uso: 20/128
@@ -326,38 +324,6 @@
                                                                         class="slot">[6]</span>
                                                         </div>
                                                 </div>
-                                                <div id="hacking_menu" class="hacking_menu">
-                                                        <div id="hacking_combust" class="botao hacking"
-                                                                onclick="adicionar(this.id)" onmouseover="info_show(this.id)" onmouseout="info_hide(this.id)">
-                                                                <img src="assets/img/chip-img.jpg" onmouseover="info_show(this.id)" onmouseout="info_hide(this.id)"><span
-                                                                        class="nome">Combust</span><span
-                                                                        class="slot">[]</span>
-                                                        </div>
-                                                        <div id="hacking_heal_drops_up" class="botao hacking"
-                                                                onclick="adicionar(this.id)" onmouseover="info_show(this.id)" onmouseout="info_hide(this.id)"><img
-                                                                        src="assets/img/chip-img.jpg"><span
-                                                                        class="nome">Heal
-                                                                        Drops Up</span><span class="slot">[]</span>
-                                                        </div>
-                                                        <div id="hacking_hijack_boost" class="botao hacking"
-                                                                onclick="adicionar(this.id)" onmouseover="info_show(this.id)" onmouseout="info_hide(this.id)"><img
-                                                                        src="assets/img/chip-img.jpg"><span
-                                                                        class="nome">Hijack
-                                                                        Boost</span><span class="slot">[]</span>
-                                                        </div>
-                                                        <div id="hacking_stun" class="botao hacking"
-                                                                onclick="adicionar(this.id)" onmouseover="info_show(this.id)" onmouseout="info_hide(this.id)"><img
-                                                                        src="assets/img/chip-img.jpg"><span
-                                                                        class="nome">Stun</span><span
-                                                                        class="slot">[]</span>
-                                                        </div>
-                                                        <div id="hacking_death_rattle" class="botao hacking"
-                                                                onclick="adicionar(this.id)" onmouseover="info_show(this.id)" onmouseout="info_hide(this.id)"><img
-                                                                        src="assets/img/chip-img.jpg"><span
-                                                                        class="nome">Death Rattle</span><span
-                                                                        class="slot">[6]</span>
-                                                        </div>
-                                                </div>
                                         </div>
                                         <div class="chip_slot" id="chip_slot">
                                                 <div class="tamanho" id="tamanho">
@@ -396,7 +362,7 @@
                                         <div class="info_box">
                                                 <p>Info</p>
                                                 <div class="nome_personagem">
-                                                        Personagem: 9S
+                                                        Personagem: 2B
                                                 </div>
                                                 <div id="os_info" class="info"><p>OS Chip: Sistema centra de um android. Remoção significa morte.</p></div>
                                                 <div id="enemy_data_info" class="info"><p>HUD Enemy Data: Exibe os niveis e hp de inimigos.</p></div>    
@@ -443,18 +409,13 @@
                                                 <div id="item_scan_info" class="info"><p>Item Scan: Exibe a localização de itens no minimapa.</p></div>
                                                 <div id="evasive_system_info" class="info"><p>Evasive System: O tempo fica lento quando proximo de projéteis inimigos.</p></div>
                                                 <div id="bullet_detonation_info" class="info"><p>Bullet Detonation: Atinja balas inimigas para as detonar.</p></div>
-                                                <div id="combust_info" class="info"><p>Combust: Causa um curto circuito em um inimigo. Fazendo-o em chamas por 3 segundos</p></div>
-                                                <div id="heal_drops_up_info" class="info"><p>Heal Drops Up: Inimigos tem 10% de chance de dropar itens de cura se derrotados por hacking.</p></div>
-                                                <div id="hijack_boost_info" class="info"><p>Hijack Boost: Fortalece inimigos controlados remotamente.</p></div>
-                                                <div id="stun_info" class="info"><p>Stun: Desativa um inimigo hackeado para emitir uma explosão que atordoa inimigos por 3 segundos.</p></div>
-                                                <div id="death_rattle_info" class="info"><p>Death Rattle: Inimigos emitem gritos de morte se derrotados por hacking.</p></div>
                                         </div>
                                 </div>
                         </div>
                 </div>
                 <div class="container">
                         <div class="grafico">
-                                <img src="assets/img/yorha_2S_character.png" alt="9S">
+                                <img src="assets/img/yorha_2B_character.png" alt="2B">
                                 <div>
                                         <canvas id="myChart"></canvas>
                                 </div>
@@ -474,61 +435,41 @@
                 valor_random = parseInt(Math.random() * 6 + 4);
 
                 contador == 8 && randomizar == 'attack_menu' ? (contador = 0, randomizar = 'defense_menu') : contador == 10 && randomizar == 'defense_menu' ?
-                        (contador = 0, randomizar = 'support_menu') : contador == 9 && randomizar == 'support_menu' ? (contador = 0, randomizar = 'hacking_menu') : '';
-                if (contador == 4 && randomizar == 'hacking_menu') break;
+                        (contador = 0, randomizar = 'support_menu') : '';
+                if (contador == 9 && randomizar == 'support_menu') break;
 
                 elemento = document.getElementById(randomizar);
                 elemento.children[contador].children[2].innerHTML = `[${valor_random}]`;
-
-                // contador == 1?randomizar = 'attack_charge_attack': contador == 2?randomizar = 'attack_counter': contador == 3?randomizar = 'attack_critical_up': contador == 4?
-                // randomizar = 'attack_down-attack_up': contador == 5?randomizar = 'attack_last_stand':contador == 6?randomizar = 'attack_ranged_attack_up':contador == 7?
-                // randomizar = 'attack_shockwave': contador == 8?randomizar = 'attack_weapon_attack_up':contador == 9?randomizar ='defense_anti_chain_damage':contador == 10?
-                // randomizar = 'defense_auto-heal':contador == 11?randomizar = 'defense_damage_absorb':contador == 12?randomizar = 'defense_deadly_heal':contador == 13?
-                // randomizar = 'defense_max_hp_up':contador == 14?randomizar = 'defense_melee_defense':contador == 15?randomizar = 'defense_offensive_heal':contador == 16?
-                // randomizar = 'defense_ranged_defense':contador == 17?randomizar = 'defense_reset':contador == 18?randomizar = 'defense_resilience':contador == 19?
-                // randomizar = 'support_auto-use_item':contador == 20?randomizar = 'support_drop_rate_up':contador == 21?randomizar = 'support_exp_gain_up':contador == 22?
-                // randomizar = 'support_evade_range_up':contador == 23?randomizar = 'support_fast_cooldown':contador == 24?randomizar = 'support_moving_speed_up':contador == 25?
-                // randomizar = 'support_overclock':contador == 26?randomizar = 'support_taunt_up':contador == 27?randomizar = 'support_vengeance':contador == 28?
-                // randomizar = 'hacking_combust':contador == 29?randomizar = 'hacking_heal_drops_up':contador == 30?randomizar = 'hacking_hijack_boost':contador == 31?
-                // randomizar = 'hacking_stun':'';
-
-                // elemento =document.getElementById(randomizar);
-                // elemento.children[2].innerHTML = `[${valor_random}]`;
         }
 
         var info_slot = 128;
         var ocupado = 80;
         var numero = 0;
         var system = 10;
-        var attack, defense, support, hacking;
-        attack = defense = support = hacking = 0
-        // var continuous_combo_qtd, auto_collect_items_qtd, item_scan_qtd, evasive_system_qtd, bullet_detonation_qtd, death_rattle_qtd, exp_gauge_qtd, fishing_spots_qtd, sound_waves_qtd;
-        // continuous_combo_qtd = auto_collect_items_qtd = item_scan_qtd = evasive_system_qtd = bullet_detonation_qtd = death_rattle_qtd = exp_gauge_qtd = fishing_spots_qtd = sound_waves_qtd = 0;
-        // var os_chip_qtd, hp_gauge_qtd, skill_gauge_qtd, enemy_data_qtd, mini_map_qtd, objectives_qtd, text_log_qtd, save_points_qtd, damage_values_qtd, control_qtd;
-        // os_chip_qtd = hp_gauge_qtd = skill_gauge_qtd = enemy_data_qtd = mini_map_qtd = objectives_qtd = text_log_qtd = save_points_qtd = damage_values_qtd = control_qtd = 1;
-
+        var attack, defense, support;
+        attack = defense = support = 0
 
         var quantidade = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0];
 
 
         function adicionar(chip) {              //Função para adicionar um chip no slot
                 if (chip == 'attack_continuous_combo' && quantidade[0] == 1 || chip == 'support_auto-collect_items' && quantidade[1] == 1 || chip == 'support_item_scan'
-                        && quantidade[2] || chip == 'support_evasive_system' && quantidade[3] == 1 || chip == 'support_bullet_detonation' && quantidade[4] == 1 || chip == 'hacking_death_rattle'
-                        && quantidade[5] == 1 || chip == 'system_os_chip' && quantidade[6] == 1 || chip == 'system_hp_gauge' && quantidade[7] == 1 || chip == 'system_skill_gauge'
-                        && quantidade[8] == 1 || chip == 'system_enemy_data' && quantidade[9] == 1 || chip == 'system_mini-map' && quantidade[10] == 1 || chip == 'system_objectives'
-                        && quantidade[11] == 1 || chip == 'system_text_log' && quantidade[12] == 1 || chip == 'system_save_points' && quantidade[13] == 1 || chip == 'system_damage_values'
-                        && quantidade[14] == 1 || chip == 'system_control' && quantidade[15] == 1 || chip == 'system_exp_gauge' && quantidade[16] == 1 || chip == 'system_fishing_spots'
-                        && quantidade[17] == 1 || chip == 'system_sound_waves' && quantidade[18] == 1) {
+                        && quantidade[2] || chip == 'support_evasive_system' && quantidade[3] == 1 || chip == 'support_bullet_detonation' && quantidade[4] == 1 || chip == 'system_os_chip' 
+                        && quantidade[6] == 1 || chip == 'system_hp_gauge' && quantidade[7] == 1 || chip == 'system_skill_gauge' && quantidade[8] == 1 || chip == 'system_enemy_data' 
+                        && quantidade[9] == 1 || chip == 'system_mini-map' && quantidade[10] == 1 || chip == 'system_objectives' && quantidade[11] == 1 || chip == 'system_text_log' 
+                        && quantidade[12] == 1 || chip == 'system_save_points' && quantidade[13] == 1 || chip == 'system_damage_values' && quantidade[14] == 1 || chip == 'system_control' 
+                        && quantidade[15] == 1 || chip == 'system_exp_gauge' && quantidade[16] == 1 || chip == 'system_fishing_spots' && quantidade[17] == 1 || chip == 'system_sound_waves' 
+                        && quantidade[18] == 1) {
 
                         alert('Você não pode ter mais de um deste mesmo chip');
 
                 } else {
                         chip == 'attack_continuous_combo' ? quantidade[0]++ : chip == 'support_auto-collect_items' ? quantidade[1]++ : chip == 'support_item_scan' ? quantidade[2]++ :
-                                chip == 'support_evasive_system' ? quantidade[3]++ : chip == 'support_bullet_detonation' ? quantidade[4]++ : chip == 'hacking_death_rattle' ? quantidade[5]++ :
-                                        chip == 'system_os_chip' ? quantidade[6]++ : chip == 'system_hp_gauge' ? quantidade[7]++ : chip == 'system_skill_gauge' ? quantidade[8]++ : chip == 'system_enemy_data' ? quantidade[9]++ :
-                                                chip == 'system_mini-map' ? quantidade[10]++ : chip == 'system_objectives' ? quantidade[11]++ : chip == 'system_text_log' ? quantidade[12]++ : chip == 'system_save_points' ? quantidade[13]++ :
-                                                        chip == 'system_damage_values' ? quantidade[14]++ : chip == 'system_control' ? quantidade[15]++ : chip == 'system_exp_gauge' ? quantidade[16]++ : chip == 'system_fishing_spots' ? quantidade[17]++ :
-                                                                chip == 'system_sound_waves' ? quantidade[18]++ : '';
+                        chip == 'support_evasive_system' ? quantidade[3]++ : chip == 'support_bullet_detonation' ? quantidade[4]++ : chip == 'system_os_chip' ? quantidade[6]++ : 
+                        chip == 'system_hp_gauge' ? quantidade[7]++ : chip == 'system_skill_gauge' ? quantidade[8]++ : chip == 'system_enemy_data' ? quantidade[9]++ :
+                        chip == 'system_mini-map' ? quantidade[10]++ : chip == 'system_objectives' ? quantidade[11]++ : chip == 'system_text_log' ? quantidade[12]++ : 
+                        chip == 'system_save_points' ? quantidade[13]++ : chip == 'system_damage_values' ? quantidade[14]++ : chip == 'system_control' ? quantidade[15]++ : 
+                        chip == 'system_exp_gauge' ? quantidade[16]++ : chip == 'system_fishing_spots' ? quantidade[17]++ : chip == 'system_sound_waves' ? quantidade[18]++ : '';
 
                         chip_elemento = document.getElementById(chip);
                         slots = chip_elemento.children[2].innerHTML;
@@ -538,12 +479,12 @@
                         var classe = 0;
 
                         chip_elemento.className == 'botao system' ? (classe = 'system', system++) : chip_elemento.className == 'botao attack' ? (classe = 'attack',attack++) : chip_elemento.className == 'botao defense' ?
-                                (classe = 'defense', defense++): chip_elemento.className == 'botao support' ? (classe = 'support',support++) : chip_elemento.className == 'botao hacking' ? (classe = 'hacking',hacking++) : '';
+                                (classe = 'defense', defense++): chip_elemento.className == 'botao support' ? (classe = 'support',support++) :'';
 
                         if (slot - ocupado < ocupar) {
                                 alert('Não é posivel adicionar esse chip');
                         } else if (chip == 'attack_continuous_combo' || chip == 'support_auto-collect_items' || chip == 'support_item_scan' || chip == 'support_evasive_system' || chip == 'support_bullet_detonation'
-                                || chip == 'hacking_death_rattle' || chip == 'system_os_chip' || chip == 'system_hp_gauge' || chip == 'system_skill_gauge' || chip == 'system_enemy_data'
+                                || chip == 'system_os_chip' || chip == 'system_hp_gauge' || chip == 'system_skill_gauge' || chip == 'system_enemy_data'
                                 || chip == 'system_mini-map' || chip == 'system_objectives' || chip == 'system_text_log' || chip == 'system_save_points' || chip == 'system_damage_values'
                                 || chip == 'system_control' || chip == 'system_exp_gauge' || chip == 'system_fishing_spots' || chip == 'system_sound_waves') {
 
@@ -564,16 +505,16 @@
         function remover(chip) {                //Função para remover chip do slot
 
                 chip == 'attack_continuous_combo1' ? quantidade[0]-- : chip == 'support_auto-collect_items1' ? quantidade[1]-- : chip == 'support_item_scan1' ? quantidade[2]-- :
-                chip == 'support_evasive_system1' ? quantidade[3]-- : chip == 'support_bullet_detonation1' ? quantidade[4]-- : chip == 'hacking_death_rattle1' ? quantidade[5]-- :
-                chip == 'system_os_chip1' ? quantidade[6]-- : chip == 'system_hp_gauge1' ? quantidade[7]-- : chip == 'system_skill_gauge1' ? quantidade[8]-- : chip == 'system_enemy_data1' ? quantidade[9]-- :
-                chip == 'system_mini-map1' ? quantidade[10]-- : chip == 'system_objectives1' ? quantidade[11]-- : chip == 'system_text_log1' ? quantidade[12]-- : chip == 'system_save_points1' ? quantidade[13]-- :
-                chip == 'system_damage_values1' ? quantidade[14]-- : chip == 'system_control1' ? quantidade[15]-- : chip == 'system_exp_gauge1' ? quantidade[16]-- : chip == 'system_fishing_spots1' ? quantidade[17]-- :
-                chip == 'system_sound_waves1' ? quantidade[18]-- : '';
+                chip == 'support_evasive_system1' ? quantidade[3]-- : chip == 'support_bullet_detonation1' ? quantidade[4]-- :chip == 'system_os_chip1' ? quantidade[6]-- : 
+                chip == 'system_hp_gauge1' ? quantidade[7]-- : chip == 'system_skill_gauge1' ? quantidade[8]-- : chip == 'system_enemy_data1' ? quantidade[9]-- :
+                chip == 'system_mini-map1' ? quantidade[10]-- : chip == 'system_objectives1' ? quantidade[11]-- : chip == 'system_text_log1' ? quantidade[12]-- : 
+                chip == 'system_save_points1' ? quantidade[13]-- : chip == 'system_damage_values1' ? quantidade[14]-- : chip == 'system_control1' ? quantidade[15]-- : 
+                chip == 'system_exp_gauge1' ? quantidade[16]-- : chip == 'system_fishing_spots1' ? quantidade[17]-- : chip == 'system_sound_waves1' ? quantidade[18]-- : '';
 
                 tirar = document.getElementById(chip);
 
                 tirar.className == 'system'?system--:tirar.className == 'attack'?attack--:tirar.className == 'defense'?defense--:tirar.className == 'support'
-                ?support--:tirar.className == 'hacking'?hacking--:'';
+                ?support--:'';
 
                 parentElem = tirar.parentNode;
                 parentElem.removeChild(tirar);
@@ -623,9 +564,7 @@
                 ?overclock_info.style.display = 'block':det == 'support_taunt_up'?taunt_up_info.style.display = 'block':det == 'support_vengeance'
                 ?vengeance_info.style.display = 'block':det == 'support_auto-collect_items'?auto_collect_items_info.style.display = 'block':det == 'support_item_scan'
                 ?item_scan_info.style.display = 'block':det == 'support_evasive_system'?evasive_system_info.style.display = 'block':det == 'support_bullet_detonation'
-                ?bullet_detonation_info.style.display = 'block':det == 'hacking_combust'?combust_info.style.display = 'block':det == 'hacking_heal_drops_up'
-                ?heal_drops_up_info.style.display = 'block':det == 'hacking_hijack_boost'?hijack_boost_info.style.display = 'block':det == 'hacking_stun'
-                ?stun_info.style.display = 'block':det == 'hacking_death_rattle'?death_rattle_info.style.display = 'block':'';
+                ?bullet_detonation_info.style.display = 'block':'';
         }
 
         function info_hide(det) {               //Esconder os efeitos dos chips
@@ -651,9 +590,7 @@
                 ?overclock_info.style.display = 'none':det == 'support_taunt_up'?taunt_up_info.style.display = 'none':det == 'support_vengeance'
                 ?vengeance_info.style.display = 'none':det == 'support_auto-collect_items'?auto_collect_items_info.style.display = 'none':det == 'support_item_scan'
                 ?item_scan_info.style.display = 'none':det == 'support_evasive_system'?evasive_system_info.style.display = 'none':det == 'support_bullet_detonation'
-                ?bullet_detonation_info.style.display = 'none':det == 'hacking_combust'?combust_info.style.display = 'none':det == 'hacking_heal_drops_up'
-                ?heal_drops_up_info.style.display = 'none':det == 'hacking_hijack_boost'?hijack_boost_info.style.display = 'none':det == 'hacking_stun'
-                ?stun_info.style.display = 'none':det == 'hacking_death_rattle'?death_rattle_info.style.display = 'none':'';
+                ?bullet_detonation_info.style.display = 'none':'';
         }
 
 
@@ -665,13 +602,10 @@
                         attack_menu.style.display = 'none';
                         defense_menu.style.display = 'none';
                         support_menu.style.display = 'none';
-                        hacking_menu.style.display = 'none';
                         but_system.style.color = 'rgb(173,169,151)';
                         but_system.style.background = '#534f46';
                         but_defense.style.color = '';
                         but_defense.style.background = '';
-                        but_hacking.style.color = '';
-                        but_hacking.style.background = '';
                         but_support.style.color = '';
                         but_support.style.background = '';
                         but_attack.style.color = '';
@@ -681,15 +615,12 @@
                         attack_menu.style.display = 'block';
                         defense_menu.style.display = 'none';
                         support_menu.style.display = 'none';
-                        hacking_menu.style.display = 'none';
                         but_attack.style.color = 'rgb(173,169,151)';
                         but_attack.style.background = '#534f46';
                         but_system.style.color = '';
                         but_system.style.background = '';
                         but_defense.style.color = '';
                         but_defense.style.background = '';
-                        but_hacking.style.color = '';
-                        but_hacking.style.background = '';
                         but_support.style.color = '';
                         but_support.style.background = '';
                 } else if (visivel == but_defense) {
@@ -697,23 +628,19 @@
                         attack_menu.style.display = 'none';
                         defense_menu.style.display = 'block';
                         support_menu.style.display = 'none';
-                        hacking_menu.style.display = 'none';
                         but_defense.style.color = 'rgb(173,169,151)';
                         but_defense.style.background = '#534f46';
                         but_system.style.color = '';
                         but_system.style.background = '';
                         but_attack.style.color = '';
                         but_attack.style.background = '';
-                        but_hacking.style.color = '';
-                        but_hacking.style.background = '';
                         but_support.style.color = '';
                         but_support.style.background = '';
-                } else if (visivel == but_support) {
+                } else {
                         system_menu.style.display = 'none';
                         attack_menu.style.display = 'none';
                         defense_menu.style.display = 'none';
                         support_menu.style.display = 'block';
-                        hacking_menu.style.display = 'none';
                         but_support.style.color = 'rgb(173,169,151)';
                         but_support.style.background = '#534f46';
                         but_system.style.color = '';
@@ -722,25 +649,7 @@
                         but_attack.style.background = '';
                         but_defense.style.color = '';
                         but_defense.style.background = '';
-                        but_hacking.style.color = '';
-                        but_hacking.style.background = '';
-                } else {
-                        system_menu.style.display = 'none';
-                        attack_menu.style.display = 'none';
-                        defense_menu.style.display = 'none';
-                        support_menu.style.display = 'none';
-                        hacking_menu.style.display = 'block';
-                        but_hacking.style.color = 'rgb(173,169,151)';
-                        but_hacking.style.background = '#534f46';
-                        but_system.style.color = '';
-                        but_system.style.background = '';
-                        but_attack.style.color = '';
-                        but_attack.style.background = '';
-                        but_defense.style.color = '';
-                        but_defense.style.background = '';
-                        but_support.style.color = '';
-                        but_support.style.background = '';
-                }
+                } 
         }
 
 
@@ -750,12 +659,11 @@
     'System',
     'Attack',
     'Defense',
-    'Support',
-    'Hacking'
+    'Support'
   ],
   datasets: [{
     label: 'Chips Equipados',
-    data: [system,attack,defense,support,hacking],
+    data: [system,attack,defense,support],
     fill: true,
     backgroundColor: 'rgb(173,169,151, 0.2)',
     borderColor: 'rgb(83, 79, 70)',
@@ -770,15 +678,15 @@ const config = {
   type: 'radar',
   data: data,
   options : {
-        // scales: {
-        //     r: {
-        //         angleLines: {
-        //             display: false
-        //         },
-        //         suggestedMin: 0,
-        //         suggestedMax: 32
-        //        }
-        // },
+        scales: {
+            r: {
+                angleLines: {
+                    display: false
+                },
+                suggestedMin: 0,
+                suggestedMax: 10
+               }
+        },
     elements: {
       line: {
         borderWidth: 3
@@ -792,7 +700,7 @@ var myChart = new Chart(
   );
   
   setInterval(function atualizar_chart() {
-        data.datasets[0].data=[system,attack,defense,support,hacking];
+        data.datasets[0].data=[system,attack,defense,support];
         myChart.update();
   }, 1000)
 </script>

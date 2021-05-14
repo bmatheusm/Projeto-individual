@@ -6,6 +6,22 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.inicio2b{
+    background-image: url(../img/2b-background.jpg);
+    width: 100%;
+    min-height: 300px;
+    background-position:center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.inicioa2{
+    background-image: url(../img/a2-background.jpg);
+    width: 100%;
+    min-height: 300px;
+    background-position:center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .instrucao{
     width: 100%;
     display: flex;
@@ -17,14 +33,13 @@
 .main{
     background-image: url(../img/fundo-menu-desktop.png);
     width: 100%;
-    min-height: 1000px;
-    display: flex;
-    justify-content: center;
+    min-height: 1440px;
     font-family: Rodin;
 }
 .container{
     width: 95%;
     display: flex;
+    margin: 0 auto;
 }
 .chips{
     width: 100%;
@@ -45,14 +60,17 @@
     width: 100%;
     min-height: 600px;
     display: flex;
-    align-items: center;
     margin-top: 34px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
 }
 .chip_slot{
     height: 512px;
-    width: 150px;
+    width: 170px;
+    min-width: 170px;
     background-color: grey;
-    margin-left: 30%;
 }
 .tamanho{
     width: 100%;
@@ -66,7 +84,7 @@
     width: 306px;
     min-width: 265px;
     background-color: rgb(173,169,151);
-    /* height: 361px; */
+    max-height: 361px;
 }
 .chip_menu .botao{
     background-color: rgb(173,169,151);
@@ -79,12 +97,6 @@
     -webkit-user-select: none; /* Não permite que o texto seja selecionavel no Chrome e safari */
     margin-bottom: 3px;
 }
-/* .chip_menu div .slot{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 69%;
-} */
 .but_skill{
     background-color: rgb(173,169,151);
     font-family: Rodin;
@@ -128,12 +140,19 @@
     font-size: 14px;
     color: #534f46;
     text-align: center;
+    -webkit-user-select: none;
 }
 .info_box{
     background: rgb(83, 79, 70);
     color: rgb(173,169,151);
-    width: 700px;
+    width: 400px;
+    height: 64px;
+    margin-bottom: 447px;
 }
+.info_box p{
+    padding: 0 3%;
+    margin: 0;
+} 
 .info{
     color: rgb(83, 79, 70);
     background: rgb(173,169,151);
@@ -141,14 +160,13 @@
 }
 .info p{
     margin: 0;
+    padding: 0 3%;
 }
 .nome_personagem{
     background-color: rgb(173,169,151);
     color: #534f46;
+    padding: 0 3%;
 }
-/* .tamanho:hover .desc{
-    display: block;
-} */
 .attack_menu{
     display: none;
 }
@@ -180,4 +198,20 @@
 .hacking{
     background-color: #efefef;
     box-shadow: 2px 0px 0px #efefef inset;
+}
+.grafico{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.grafico img{
+    height: 576px;
+}
+.grafico div{
+    width: 500px;
+    height: fit-content;
 }
