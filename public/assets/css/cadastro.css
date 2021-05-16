@@ -1,0 +1,83 @@
+main{
+    height: 829px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/ruins.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cadastro{
+    height: 600px;
+    width: 520px;
+    background-color: black;
+    border: solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    flex-direction: column;
+}
+.login{
+    height: 470px;
+    width: 520px;
+    background-color: white;
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    flex-direction: column;
+}
+.box_cadastro{
+    color: white;
+    font-family: Rodin;
+}
+.box_login{
+    font-family: Rodin;
+    color: black;
+}
+form{
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+input{
+    margin-bottom: 20px;
+    height: 25px;
+    padding: 0 10px;
+}
+button{
+    width: 250px;
+    height: 52px;
+    margin: 15px auto 0 auto;
+    font-family: 'Rodin';
+    font-size: 17px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    border: none;
+    background-color: white;
+}
+.box_login button{
+    background-color: black;
+    color: white;
+}
+.redirecionar_login{
+    margin-top: 31px;
+}
+.redirecionar_login a{
+    color: white;
+}
+.redirecionar_cadastro{
+    margin-top: 31px;
+}
+.redirecionar_cadastro a{
+    color: black;
+}
+.yorha{
+    margin-bottom: 20px;
+}
+.yorha img{
+    height: 100px;
+}

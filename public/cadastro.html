@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <a href="home.html">
+                <img class="header-logo-img"
+                    src="assets/img/nier-automata-ps4-games-playstation-nier-automata-logo-transparent-440_220.jpg">
+            </a>
+        </div>
+    </div>
+    <main>
+        <div class="cadastro">
+            <div class="yorha">
+            <img src="assets/img/yorha-black-bg.png" alt="YoRHa">
+            </div>
+            <div class="box_cadastro">
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                    Nome de Usuario 
+                    <input id="inp_usuario" type="text" name="nome" class="" autofocus required minlength="4">
+
+
+                    Email
+                    <input type="text" name="email" class="" required minlength="4">
+
+
+                    Senha
+                    <input type="password" name="senha" required minlength="6">
+
+
+                    Confirmar senha
+                    <input type="password" minlength="6">
+
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div class="redirecionar_login"><a href="login.html">Já é cadastrado?</a></div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
+<script>
+
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                window.location.href = 'login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+            }
+        });
+
+        return false;
+    }
+
+</script>
