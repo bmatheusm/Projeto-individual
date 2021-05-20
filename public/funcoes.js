@@ -11,8 +11,10 @@ function verificar_autenticacao() {
     
     if (login_usuario == undefined)  {
         redirecionar_login();
+        
     } else {
-        b_usuario.innerHTML = nome_usuario;
+        // b_usuario.innerHTML = nome_usuario; 
+        // header_logado.style.display = 'none';
         validar_sessao();
     }
     

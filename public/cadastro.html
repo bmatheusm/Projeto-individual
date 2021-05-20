@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <div class="header-logo">
-            <a href="home.html">
+            <a href="index.html">
                 <img class="header-logo-img"
                     src="assets/img/nier-automata-ps4-games-playstation-nier-automata-logo-transparent-440_220.jpg">
             </a>
@@ -27,11 +27,11 @@
             <div class="box_cadastro">
                 <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
                     Nome de Usuario 
-                    <input id="inp_usuario" type="text" name="nome" class="" autofocus required minlength="4">
+                    <input id="inp_usuario" type="text" name="nome" autofocus required minlength="4">
 
 
                     Email
-                    <input type="text" name="email" class="" required minlength="4">
+                    <input type="text" name="email" required minlength="4">
 
 
                     Senha
@@ -68,9 +68,8 @@
             } else {
 
                 console.log('Erro de cadastro!');
-                response.text().then(function (resposta) {
-                    div_erro.innerHTML = resposta;
-                });
+                alert('Erro de cadastro!');
+
             }
         });
 

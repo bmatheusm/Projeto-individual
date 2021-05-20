@@ -58,6 +58,7 @@ button{
     text-transform: uppercase;
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 .box_login button{
     background-color: black;

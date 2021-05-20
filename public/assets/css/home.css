@@ -11,12 +11,11 @@
     min-width: 100%;
     width: fit-content;
     padding: 2% 0;
-}
+} 
 .container{
     display: flex;
     align-items: center;
     margin: 0 auto;
-    /* flex-wrap: wrap; Está jogando a imagem para baixo quando a tela está muito pequena */
     max-width: 85%;
     justify-content: center;
 }

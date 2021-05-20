@@ -148,6 +148,7 @@
     width: 400px;
     height: 64px;
     margin-bottom: 447px;
+    -webkit-user-select: none;
 }
 .info_box p{
     padding: 0 3%;
@@ -210,6 +211,7 @@
 }
 .grafico img{
     height: 576px;
+    -webkit-user-select: none;
 }
 .grafico div{
     width: 500px;

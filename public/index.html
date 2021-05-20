@@ -7,16 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <script type="text/javascript" src="funcoes.js"></script>
     <title>Home</title>
 </head>
 
 <body>
     <div class="header">
         <div class="header-logo">
-            <a href="home.html">
+            <a href="index.html">
                 <img class="header-logo-img"
                     src="assets/img/nier-automata-ps4-games-playstation-nier-automata-logo-transparent-440_220.jpg">
             </a>
+        </div>
+        <div class="pags">
+            <div id="header_deslogado">
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            </div>
+            <div id="header_logado">
+            <a href="#" onclick="logoff()">Sair</a>
+            </div>
         </div>
     </div>
     <div class="inicio-row">
@@ -45,13 +55,16 @@
             <div class="ambiente"><img src="assets/img/02-1.jpg" alt="Desert"></div>
         </div>
     </div>
-    <div class="instrucao"><h1>Clique no personagem que você deseja criar o loadout</h1></div>
+    <div class="instrucao">
+        <h1>Clique no personagem que você deseja criar o loadout</h1>
+    </div>
     <div class="personagens-row">
         <div class="container">
-            
-        <div class="personagens"><a href="9s.html"><img src="assets/img/yorha_2S_character.png" alt="9S"></a></div>
-        <div class="personagens a2"><a href="a2.html"><img src="assets/img/yorha_A2_character.png" alt="A2"></a></div>
-        <div class="personagens"><a href="2b.html"><img src="assets/img/yorha_2B_character.png" alt="2B"></a></div>  
+
+            <div class="personagens"><a href="9s.html"><img src="assets/img/yorha_2S_character.png" alt="9S"></a></div>
+            <div class="personagens a2"><a href="a2.html"><img src="assets/img/yorha_A2_character.png" alt="A2"></a>
+            </div>
+            <div class="personagens"><a href="2b.html"><img src="assets/img/yorha_2B_character.png" alt="2B"></a></div>
         </div>
     </div>
     <footer></footer>
@@ -59,5 +72,5 @@
 
 </html>
 <script>
-
+    
 </script>
