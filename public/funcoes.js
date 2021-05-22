@@ -13,8 +13,7 @@ function verificar_autenticacao() {
         redirecionar_login();
         
     } else {
-        // b_usuario.innerHTML = nome_usuario; 
-        // header_logado.style.display = 'none';
+        b_usuario.innerHTML = nome_usuario; 
         validar_sessao();
     }
     
@@ -27,7 +26,7 @@ function logoff() {
 }
 
 function validar_sessao() {
-    fetch(`/usuarios/sessao/${login_usuario}`, {cache:'no-store'})
+    fetch(`/usuarios/sessao/${nome_usuario}`, {cache:'no-store'})
     .then(resposta => {
         if (resposta.ok) {
             resposta.text().then(texto => {
@@ -41,5 +40,5 @@ function validar_sessao() {
 }
 
 function finalizar_sessao() {
-    fetch(`/usuarios/sair/${login_usuario}`, {cache:'no-store'}); 
+    fetch(`/usuarios/sair/${nome_usuario}`, {cache:'no-store'}); 
 }

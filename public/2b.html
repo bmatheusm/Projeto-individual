@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/chip.css">
+        <link rel="shortcut icon" href="assets/img/icone.png" type="image/x-icon">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" 
         integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" 
         crossorigin="anonymous"></script>
@@ -20,6 +21,10 @@
                         <a href="index.html">
                                 <img class="header-logo-img" src="assets/img/nier-automata-ps4-games-playstation-nier-automata-logo-transparent-440_220.jpg">
                         </a>
+                </div>
+                <div class="pags">
+                        <div id="b_usuario"></div>
+                        <a href="#" onclick="logoff()">Sair</a>        
                 </div>
         </div>
         <div class="inicio2b"></div>
@@ -423,12 +428,23 @@
                         </div>
                 </div>
         </div>
-        <footer></footer>
+        <footer>
+                <div class="footer_box">
+                        <div class="seta">
+                                <a href="a2.html"><img src="assets/img/seta-esquerda.png" alt="Seta"></a>
+                                Ir para A2
+                        </div>
+                        <div class="seta">
+                                Ir para 9S 
+                                <a href="9s.html"><img src="assets/img/seta-direita.png" alt="Seta"></a>
+                        </div>
+                </div>
+        </footer>
 </body>
 
 </html>
 <script>
-
+        verificar_autenticacao();
 
         var randomizar = 'attack_menu';
 

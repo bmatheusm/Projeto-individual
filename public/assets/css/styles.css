@@ -46,14 +46,39 @@ span{
 .pags{
     padding-right: 2%;
     display: flex;
+    font-family: Rodin;
+    color: white;
+}
+.pags div{
+    display: flex;
 }
 .pags a{
     color: white;
-    font-family: Rodin;
     margin-left: 56px;
 }
 footer{
     width: 100%;
     background-color: black;
     height: 80px;
+}
+.footer_box{
+    margin: 0 auto;
+    width: 98%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.seta{
+    color: white;
+    font-family: Rodin;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.seta img{
+    height: 100%;
+}
+.seta a{
+    height: 90%;
 }

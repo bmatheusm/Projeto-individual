@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="shortcut icon" href="assets/img/icone.png" type="image/x-icon">
     <script type="text/javascript" src="funcoes.js"></script>
     <title>Home</title>
 </head>
@@ -21,36 +22,36 @@
         </div>
         <div class="pags">
             <div id="header_deslogado">
-            <a href="cadastro.html">Cadastro</a>
-            <a href="login.html">Login</a>
+                <a href="cadastro.html">Cadastro</a>
+                <a href="login.html">Login</a>
             </div>
             <div id="header_logado">
-            <a href="#" onclick="logoff()">Sair</a>
+                <div id="b_usuario"></div>
+                <a href="#" onclick="logoff()">Sair</a>
             </div>
         </div>
     </div>
     <div class="inicio-row">
-        <!--Vou adicionar algumas coisas aqui-->
+        
     </div>
     <div class="introducao-row">
         <div class="container">
             <div class="ambiente"><img src="assets/img/bg_story.jpg" alt="City ruins"></div>
             <div class="historia">
-                <p>The distant future…
+                    <p>
+                        O futuro distante… <br>
 
-                    Invaders from another world attack without warning, unleashing a new type of threat: weapons known
-                    as
-                    “machine lifeforms.” In the face of this insurmountable threat, mankind is driven from Earth and
-                    takes
-                    refuge on the Moon.
+                        Invasores de outro mundo atacam sem aviso, lançando um novo tipo de ameaça: armas conhecidas como
+                        “formas de vida de máquina.” Diante dessa ameaça intransponível, a humanidade é expulsa da Terra e
+                        se refúgia na lua.
+                        
+                        O Conselho da Humanidade organiza uma resistência de soldados andróides em uma tentativa de recuperar seu
+                        planeta.
+                        Para quebrar este impasse, a Resistência implanta uma nova unidade de infantaria andróide: YoRHa.
 
-                    The Council of Humanity organizes a resistance of android soldiers in an effort to take back their
-                    planet.
-                    To break the deadlock, the Resistance deploys a new unit of android infantry: YoRHa .
-
-                    In the forsaken wasteland below, the war between the machines and the androids rages on. A war that
-                    is soon
-                    to unveil the long-forgotten truth of this world...</p>
+                        Nessa terra sem vida, a guerra entre as máquinas e os andróides continua. Uma guerra que
+                        logo desvendará a verdade há muito esquecida deste mundo ...
+                    </p>
             </div>
             <div class="ambiente"><img src="assets/img/02-1.jpg" alt="Desert"></div>
         </div>
@@ -72,5 +73,19 @@
 
 </html>
 <script>
-    
+    verificar_autenticacao()
+
+    function verificar_autenticacao() {
+        login_usuario = sessionStorage.login_usuario_meuapp;
+        nome_usuario = sessionStorage.nome_usuario_meuapp;
+
+        if (login_usuario == undefined) {
+            header_logado.style.display = 'none';
+
+        } else {
+            b_usuario.innerHTML = nome_usuario; 
+            header_deslogado.style.display = 'none';
+            validar_sessao();
+        }
+    }
 </script>

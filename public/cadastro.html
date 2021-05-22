@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="shortcut icon" href="assets/img/icone.png" type="image/x-icon">
     <title>Cadastro</title>
 </head>
 
@@ -22,24 +23,24 @@
     <main>
         <div class="cadastro">
             <div class="yorha">
-            <img src="assets/img/yorha-black-bg.png" alt="YoRHa">
+                <img src="assets/img/yorha-black-bg.png" alt="YoRHa">
             </div>
             <div class="box_cadastro">
                 <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-                    Nome de Usuario 
-                    <input id="inp_usuario" type="text" name="nome" autofocus required minlength="4">
+                    Nome de Usuario
+                    <input id="inp_usuario" type="text" name="nome" autofocus required minlength="4" maxlength="15">
 
 
                     Email
-                    <input type="text" name="email" required minlength="4">
+                    <input type="email" name="email" required minlength="4" maxlength="100">
 
 
                     Senha
-                    <input type="password" name="senha" required minlength="6">
+                    <input id="inp_senha" type="password" name="senha" required minlength="6" maxlength="20">
 
 
                     Confirmar senha
-                    <input type="password" minlength="6">
+                    <input id="inp_confirm" type="password" minlength="6" required  maxlength="20">
 
 
                     <button type="submit">Cadastrar</button>
@@ -55,25 +56,33 @@
 <script>
 
     function cadastrar() {
-        var formulario = new URLSearchParams(new FormData(form_cadastro));
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            body: formulario
-        }).then(function (response) {
+        if (inp_senha.value == inp_confirm.value) {
 
-            if (response.ok) {
+            var formulario = new URLSearchParams(new FormData(form_cadastro));
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
 
-                window.location.href = 'login.html';
+                if (response.ok) {
 
-            } else {
+                    window.location.href = 'login.html';
 
-                console.log('Erro de cadastro!');
-                alert('Erro de cadastro!');
+                } else {
 
-            }
-        });
+                    console.log('Erro de cadastro!');
+                    alert('Erro de cadastro!');
 
-        return false;
+                }
+            });
+
+            return false;
+
+        } else {
+            alert('Falha na confirmação de senha');
+            return false;
+        }
     }
+
 
 </script>

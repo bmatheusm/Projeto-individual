@@ -130,7 +130,7 @@
     min-width: 179px;
 }
 .desc{
-    margin-left: -260px;  /* Preciso descobrir o que fazer com .desc hover não é uma boa */
+    margin-left: -260px;  
     justify-content: center;
     width: 245px;
     display: none;
@@ -215,5 +215,5 @@
 }
 .grafico div{
     width: 500px;
-    height: fit-content;
+    min-width: 458px;
 }
