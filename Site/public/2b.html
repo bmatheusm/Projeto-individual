@@ -12,7 +12,7 @@
         integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" 
         crossorigin="anonymous"></script>
         <script type="text/javascript" src="funcoes.js"></script>
-        <title>A2</title>
+        <title>2B</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
                         <a href="#" onclick="logoff()">Sair</a>        
                 </div>
         </div>
-        <div class="inicioa2"></div>
+        <div class="inicio2b"></div>
         <div class="instrucao">
                 <h1>Escolha seus chips</h1>
         </div>
@@ -368,7 +368,7 @@
                                         <div class="info_box">
                                                 <p>Info</p>
                                                 <div class="nome_personagem">
-                                                        Personagem: A2
+                                                        Personagem: 2B
                                                 </div>
                                                 <div id="os_info" class="info"><p>OS Chip: Sistema central de um android. Remoção significa morte.</p></div>
                                                 <div id="enemy_data_info" class="info"><p>HUD Enemy Data: Exibe os niveis e hp de inimigos.</p></div>    
@@ -421,7 +421,7 @@
                 </div>
                 <div class="container">
                         <div class="grafico">
-                                <img src="assets/img/yorha_A2_character.png" alt="A2">
+                                <img src="assets/img/yorha_2B_character.png" alt="2B">
                                 <div>
                                         <canvas id="myChart"></canvas>
                                 </div>
@@ -431,22 +431,22 @@
         <footer>
                 <div class="footer_box">
                         <div class="seta">
-                                <a href="9s.html"><img src="assets/img/seta-esquerda.png" alt="Seta"></a>
-                                Ir para 9S
+                                <a href="a2.html"><img src="assets/img/seta-esquerda.png" alt="Seta"></a>
+                                Ir para A2
                         </div>
+                        <div>Desenvolvido por Matheus Magalhães Barbosa</div>
                         <div class="seta">
-                                Ir para 2B
-                                <a href="2b.html"><img src="assets/img/seta-direita.png" alt="Seta"></a>
+                                Ir para 9S 
+                                <a href="9s.html"><img src="assets/img/seta-direita.png" alt="Seta"></a>
                         </div>
-                        
                 </div>
         </footer>
 </body>
 
 </html>
 <script>
-       verificar_autenticacao();
-        
+        verificar_autenticacao();
+
         var randomizar = 'attack_menu';
 
         but_system.style.color = 'rgb(173,169,151)';
@@ -547,6 +547,8 @@
 
                 info_slot = ocupado / 4;
                 div_info_slot.innerHTML = `Slots em uso: ${info_slot}/128`;
+                //remove() pode apagar um elemento com especificamente o id e não var
+                //removeChild() precisa do elemento pai para ser usado
         }
         
         function mostrar(x) {                   //Mostrar o nome dos chips no slot
@@ -691,7 +693,7 @@
     pointHoverBorderColor: 'rgb(255, 99, 132)'
   }]
 };
- 
+
 const config = {
   type: 'radar',
   data: data,

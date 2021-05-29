@@ -59,7 +59,16 @@ span{
 footer{
     width: 100%;
     background-color: black;
-    height: 80px;
+    height: 95px;
+    text-align: center;
+    color: white;
+    font-family: Rodin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    color: grey;
 }
 .footer_box{
     margin: 0 auto;
@@ -81,4 +90,8 @@ footer{
 }
 .seta a{
     height: 90%;
+}
+.conexao{
+    display: none;
+    align-items: center;
 }
