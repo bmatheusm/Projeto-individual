@@ -766,32 +766,14 @@
                 elemento = document.getElementById(randomizar);
                 elemento.children[contador].children[2].innerHTML = `[${valor_random}]`;
 
-                // contador == 1?randomizar = 'attack_charge_attack': contador == 2?randomizar = 'attack_counter': contador == 3?randomizar = 'attack_critical_up': contador == 4?
-                // randomizar = 'attack_down-attack_up': contador == 5?randomizar = 'attack_last_stand':contador == 6?randomizar = 'attack_ranged_attack_up':contador == 7?
-                // randomizar = 'attack_shockwave': contador == 8?randomizar = 'attack_weapon_attack_up':contador == 9?randomizar ='defense_anti_chain_damage':contador == 10?
-                // randomizar = 'defense_auto-heal':contador == 11?randomizar = 'defense_damage_absorb':contador == 12?randomizar = 'defense_deadly_heal':contador == 13?
-                // randomizar = 'defense_max_hp_up':contador == 14?randomizar = 'defense_melee_defense':contador == 15?randomizar = 'defense_offensive_heal':contador == 16?
-                // randomizar = 'defense_ranged_defense':contador == 17?randomizar = 'defense_reset':contador == 18?randomizar = 'defense_resilience':contador == 19?
-                // randomizar = 'support_auto-use_item':contador == 20?randomizar = 'support_drop_rate_up':contador == 21?randomizar = 'support_exp_gain_up':contador == 22?
-                // randomizar = 'support_evade_range_up':contador == 23?randomizar = 'support_fast_cooldown':contador == 24?randomizar = 'support_moving_speed_up':contador == 25?
-                // randomizar = 'support_overclock':contador == 26?randomizar = 'support_taunt_up':contador == 27?randomizar = 'support_vengeance':contador == 28?
-                // randomizar = 'hacking_combust':contador == 29?randomizar = 'hacking_heal_drops_up':contador == 30?randomizar = 'hacking_hijack_boost':contador == 31?
-                // randomizar = 'hacking_stun':'';
-
-                // elemento =document.getElementById(randomizar);
-                // elemento.children[2].innerHTML = `[${valor_random}]`;
         }
 
-        var info_slot = 128;
+        var info_slot = 128; 
         var ocupado = 80;
         var numero = 0;
         var system = 10;
         var attack, defense, support, hacking;
         attack = defense = support = hacking = 0;
-        // var continuous_combo_qtd, auto_collect_items_qtd, item_scan_qtd, evasive_system_qtd, bullet_detonation_qtd, death_rattle_qtd, exp_gauge_qtd, fishing_spots_qtd, sound_waves_qtd;
-        // continuous_combo_qtd = auto_collect_items_qtd = item_scan_qtd = evasive_system_qtd = bullet_detonation_qtd = death_rattle_qtd = exp_gauge_qtd = fishing_spots_qtd = sound_waves_qtd = 0;
-        // var os_chip_qtd, hp_gauge_qtd, skill_gauge_qtd, enemy_data_qtd, mini_map_qtd, objectives_qtd, text_log_qtd, save_points_qtd, damage_values_qtd, control_qtd;
-        // os_chip_qtd = hp_gauge_qtd = skill_gauge_qtd = enemy_data_qtd = mini_map_qtd = objectives_qtd = text_log_qtd = save_points_qtd = damage_values_qtd = control_qtd = 1;
 
 
         var quantidade = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0];
@@ -816,7 +798,7 @@
                                                         chip == 'system_damage_values' ? quantidade[14]++ : chip == 'system_control' ? quantidade[15]++ : chip == 'system_exp_gauge' ? quantidade[16]++ : chip == 'system_fishing_spots' ? quantidade[17]++ :
                                                                 chip == 'system_sound_waves' ? quantidade[18]++ : '';
 
-                        chip_elemento = document.getElementById(chip);
+                        chip_elemento = document.getElementById(chip);  // Pegando o numero de slots que o chip vai ocupar
                         slots = chip_elemento.children[2].innerHTML;
                         slots = slots.replace(/(\[)|(\])/g, '');//Tirando '[]'
                         ocupar = slots * 4;
@@ -865,15 +847,13 @@
                 parentElem.removeChild(tirar);
 
                 altura = tirar.style.height;
-                formatado = Number(altura.replace(/px/i, '')); //Substituindo 'px' por nada, o 'i' é para ignorar se a diferença de maiuscula e minuscula
+                formatado = Number(altura.replace(/px/i, '')); //Substituindo 'px' por nada, o 'i' é para ignorar a diferença de maiuscula e minuscula
                 ocupado = ocupado - formatado;
 
                 tamanho.style.height = `${ocupado}px`;
 
                 info_slot = ocupado / 4;
                 div_info_slot.innerHTML = `Slots em uso: ${info_slot}/128`;
-                //remove() pode apagar um elemento com especificamente o id e não var
-                //removeChild() precisa do elemento pai para ser usado
         }
 
         function mostrar(x) {                   //Mostrar o nome dos chips no slot
@@ -1080,5 +1060,6 @@
         setInterval(function atualizar_chart() {
                 data.datasets[0].data = [system, attack, defense, support, hacking];
                 myChart.update();
-        }, 500)
+        }, 1000)
+
 </script>
