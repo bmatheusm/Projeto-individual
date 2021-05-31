@@ -217,3 +217,23 @@
     width: 500px;
     min-width: 458px;
 }
+.esconder{
+    display: none;
+}
+.but_salvar{
+    background-color: #534f46;
+    font-family: Rodin;
+    color: rgb(173,169,151);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    height: 33px;
+    width: 112px;
+    border: none;
+}
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 53px;
+}

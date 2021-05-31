@@ -2,8 +2,10 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('../models').sequelize;
 var Usuario = require('../models').Usuario;
+var Slot = require('../models').Slot
 
 let sessoes = [];
+let usuarios = [];
 
 /* Recuperar usuário por login e senha */
 router.post('/autenticar', function(req, res, next) {
@@ -22,6 +24,7 @@ router.post('/autenticar', function(req, res, next) {
 
 		if (resultado.length == 1) {
 			sessoes.push(resultado[0].dataValues.nome);
+			usuarios.push(resultado[0].dataValues.id);
 			console.log('sessoes: ',sessoes);
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
@@ -44,6 +47,27 @@ router.post('/cadastrar', function(req, res, next) {
 		nome : req.body.nome,
 		email : req.body.email,
 		senha: req.body.senha
+	}).then(resultado => {
+		console.log(`Registro criado: ${resultado}`)
+        res.send(resultado);
+    }).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
+});
+
+/* Salvar slot */
+router.post('/salvar', function(req, res, next) {
+	console.log('Salvando slot');
+	
+	Slot.create({
+		system : req.body.system,
+		attack : req.body.attack,
+		defense : req.body.defense,
+		support : req.body.support,
+		hacking : req.body.hacking,
+		usuario : usuarios[0],
+		personagem : req.body.personagem
 	}).then(resultado => {
 		console.log(`Registro criado: ${resultado}`)
         res.send(resultado);
@@ -89,6 +113,7 @@ router.get('/sair/:login', function(req, res, next) {
 		}
 	}
 	sessoes = nova_sessoes;
+	usuarios = [];
 	res.send(`Sessão do usuário ${login} finalizada com sucesso!`);
 });
 

@@ -664,6 +664,20 @@
                                 </div>
                         </div>
                 </div>
+                <form id="form_slot" method="post" onsubmit="return salvar()">
+
+                        <input id="inp_system" type="text" name="system" class="esconder">
+
+                        <input id="inp_attack" type="text" name="attack" class="esconder">
+
+                        <input id="inp_defense" type="text" name="defense" class="esconder">
+
+                        <input id="inp_support" type="text" name="support" class="esconder">
+
+                        <input id="inp_personagem" type="text" name='personagem' class="esconder">
+
+                        <button type="submit" class="but_salvar">Salvar</button>
+                </form>
         </div>
         <footer>
                 <div class="footer_box">
@@ -683,6 +697,35 @@
 </html>
 <script>
         verificar_autenticacao();
+
+        function salvar() {
+
+                inp_system.value = system;
+                inp_attack.value = attack;
+                inp_defense.value = defense;
+                inp_support.value = support;
+                inp_personagem.value = '500';
+
+                var formulario = new URLSearchParams(new FormData(form_slot));
+                fetch("/usuarios/salvar", {
+                        method: "POST",
+                        body: formulario
+                }).then(function (response) {
+
+                        if (response.ok) {
+
+                                alert('Dados salvos com sucesso');
+
+                        } else {
+
+                                console.log('Erro');
+                                alert('Erro');
+
+                        }
+                });
+
+                return false;
+        }
 
         var randomizar = 'attack_menu';
 
